@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  app:
+    image: danlynn/ember-cli:3.1.4
+
+    command: ember server --watcher polling
+    volumes:
+      - .:/myapp
+    ports:
+      - "4200:4200"
+      - "7020:7020"
+      - "7357:7357"
