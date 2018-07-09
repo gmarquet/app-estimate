@@ -1,0 +1,22 @@
+////////////////////////////////////////
+///// Layout
+////////////////////////////////////////
+
+html, body{
+  height: 100vh;
+}
+
+body>div.ember-view,
+body>div.ember-view > .container{
+  height: 100%;
+}
+
+footer{
+  min-height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+
+h1{
+  text-align: center;
+}

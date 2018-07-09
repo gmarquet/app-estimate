@@ -1,5 +1,55 @@
 export default [
-  {id: 1, text:"dsqdsqdqdq"},
-  {id: 2, text:"dsqdsqdqdq"},
-  {id: 3, text:"dsqdsqdqdq"},
+// Question 1
+  {id: 1, text:"Small", duration: 2},
+  {id: 2, text:"Medium", duration: 4},
+  {id: 3, text:"Large", duration: 10},
+// Question 2
+  {id: 4, text:"MVP", duration: 1, coefficient: 0},
+  {id: 5, text:"Large", duration: 2, coefficient: 0.5 },
+  {id: 6, text:"polished", duration: 4, coefficient: 1 },
+// Question 3
+  {id: 7, text:"Email / Password Sign Up", duration: 0.5},
+  {id: 8, text:"Facebook Sign Up"},
+  {id: 9, text:"Twitter Sign Up"},
+  {id: 10, text:"Google Sign Up"},
+  {id: 11, text:"LinkedIn Sign Up"},
+  {id: 12, text:"Github Sign Up"},
+  {id: 13, text:"User Invitation Emails"},
+  {id: 14, text:"Multi-tenant Accounts"},
+  {id: 15, text:"Subdomains"},
+  {id: 16, text:"Custom Domains"},
+// Question 4
+  {id: 17, text:"Dashboard"},
+  {id: 18, text:"Activity Feed"},
+  {id: 19, text:"File Uploading"},
+  {id: 20, text:"User Profiles"},
+  {id: 21, text:"Transactional Emails"},
+  {id: 22, text:"Tags"},
+  {id: 23, text:"Audio/Video processing"},
+  {id: 24, text:"Free text searching"},
+// Question 5
+  {id: 25, text:"Calendaring"},
+  {id: 26, text:"Display of Map data / Geolocation"},
+  {id: 27, text:"Display of custom map markers/regions"},
+  {id: 28, text:"Bookings"},
+// Question 6
+  {id: 29, text:"Messaging"},
+  {id: 30, text:"Forums or commenting"},
+  {id: 31, text:"Social Sharing"},
+  {id: 32, text:"Push to Facebook Open Graph"},
+// Question 7
+  {id: 33, text:"Subscription plans"},
+  {id: 34, text:"Payment processing"},
+  {id: 35, text:"Shopping Cart"},
+  {id: 36, text:"User Marketplace"},
+  {id: 37, text:"Product Management"},
+// Question 8
+  {id: 38, text:"CMS Integration"},
+  {id: 39, text:"User Admin pages"},
+  {id: 40, text:"Moderation / Content Approval"},
+  {id: 41, text:"Intercom"},
+  {id: 42, text:"Usage Analytics"},
+  {id: 43, text:"Crash Reporting"},
+  {id: 44, text:"Performance Monitoring"},
+  {id: 45, text:"Multilingual Support"},
 ];

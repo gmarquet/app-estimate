@@ -1,0 +1,14 @@
+&{
+  text-align: center;
+  min-height: 500px;
+  .badge {
+    font-size: 2rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .divider{
+    margin: 0 50%;
+    min-height: 15px;
+    border: 1px grey solid;
+  }
+}

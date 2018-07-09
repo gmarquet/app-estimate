@@ -1,3 +1,12 @@
 {{#each questions as |question i|}}
-  <li>{{#link-to "question" question.id}}{{i}}{{/link-to}}</li>
+  {{#question-link "question" question.id
+    class="badge badge-primary"
+    active=(eq question.id currentQuestionId)
+    isValid=(if question.isValid true)
+  }}
+    {{plus-one i}}
+  {{/question-link}}
+  {{#unless (eq question.id questions.lastObject.id)}}
+    <div class="divider flex-fill"></div>
+  {{/unless}}
 {{/each}}

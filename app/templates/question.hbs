@@ -1,1 +1,21 @@
-{{question-component question=model}}
+<div class="question">
+  <h3 class="question-title">
+    {{model.title}}
+    {{#bs-tooltip placement="bottom"}}
+      {{model.description}}
+    {{/bs-tooltip}}
+  </h3>
+
+  <div class="answers row">
+    {{#each model.answers as |a|}}
+      {{answer-component class="col-3" answer=a click=(action "select" a)}}
+    {{else}}
+      No answer for this question
+    {{/each}}
+  </div>
+  {{#if (or model.multiple model.passable)}}
+    {{#bs-button type="primary" click=(action "next")}}
+      Question suivante
+    {{/bs-button}}
+  {{/if}}
+</div>

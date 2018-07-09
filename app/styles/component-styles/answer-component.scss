@@ -1,6 +1,7 @@
 &{
   border : 1px red solid;
   padding: 16px;
+  cursor: pointer;
   &.selected{
     border-color:green;
   }

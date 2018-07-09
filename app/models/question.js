@@ -7,12 +7,47 @@ export default DS.Model.extend({
   title: attr('string'),
   description: attr('string'),
   image: attr('string', {defaultValue: "default-question.png}"}),
-  multiple: attr('booelan'),
+  multiple: attr('boolean'),
+  passable: attr('boolean'),
+  passed: attr('boolean'),
 
   answers: hasMany('answer'),
+
+
+  totalDuration: computed('answers.@each.selected', function(){
+    return get(this, "answers").reduce(function(acc, a){
+      if(get(a, "selected")) return get(a, "duration") + acc;
+      return acc;
+    }, 0);
+  }),
+
+  coefficientTotal: computed('answers.@each.selected', function(){
+    return get(this, "answers").reduce(function(acc, a){
+      if(get(a, "selected")) return get(a, "coefficient") + acc;
+      return acc;
+    }, 0);
+  }),
 
   hasOneAnswer: computed('answers.@each.selected', function(){
     return get(this, "answers").isAny('selected', true);
   }),
 
+  isValid: computed('hasOneAnswer', 'passable', 'passed', function(){
+    if (get(this, 'hasOneAnswer') || (get(this, 'passable') && get(this, "passed"))) {
+      return true;
+    }
+    return false;
+  }),
+
+
+  selectAnswer(a){
+    if (get(this, 'multiple')) {
+      a.toggleProperty('selected');
+    }else{
+      get(this, 'answers').forEach((p) =>{
+        p.set('selected', false);
+      });
+      a.set("selected", true);
+    }
+  }
 });

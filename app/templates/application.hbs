@@ -1,3 +1,13 @@
-<h1>Estimez le cout de votre application web</h1>
-{{question-list questions=model}}
-{{outlet}}
+<div class="container d-flex flex-column">
+  <h1>Estimez le cout de votre application web</h1>
+  {{price-meter model=model}}
+  <div class="row flex-fill">
+    {{question-list class="col-1 d-flex flex-column justify-content-between" questions=model}}
+    <div class="col-11">
+      {{outlet}}
+    </div>
+  </div>
+  <footer>
+    Copyright
+  </footer>
+</div>

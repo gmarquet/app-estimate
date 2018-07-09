@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('question', {path: '/:id'});
+  this.route('send-estimate');
 });
 
 export default Router;
