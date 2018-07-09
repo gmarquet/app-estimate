@@ -1,0 +1,15 @@
+<h3 class="question-title">
+  {{question.title}}
+  {{#bs-tooltip placement="bottom"}}
+    {{question.description}}
+  {{/bs-tooltip}}
+</h3>
+
+<div class="answers">
+  {{#each question.answers as |a|}}
+    {{answer-component answer=a}}
+  {{else}}
+    No answer for this question
+  {{/each}}
+</div>
+
