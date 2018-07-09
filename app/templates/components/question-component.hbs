@@ -7,7 +7,7 @@
 
 <div class="answers">
   {{#each question.answers as |a|}}
-    {{answer-component answer=a}}
+    {{answer-component answer=a click=(action "toggle" a)}}
   {{else}}
     No answer for this question
   {{/each}}

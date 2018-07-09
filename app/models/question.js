@@ -11,7 +11,8 @@ export default DS.Model.extend({
 
   answers: hasMany('answer'),
 
-  hasOneAnswer: computed('answers@each.selected', function(){
+  hasOneAnswer: computed('answers.@each.selected', function(){
     return get(this, "answers").isAny('selected', true);
   }),
+
 });
