@@ -6,7 +6,7 @@ const { attr, hasMany } = DS;
 export default DS.Model.extend({
   title: attr('string'),
   description: attr('string'),
-  image: attr('string'),
+  image: attr('string', {defaultValue: "default-question.png}"}),
   multiple: attr('booelan'),
 
   answers: hasMany('answer'),

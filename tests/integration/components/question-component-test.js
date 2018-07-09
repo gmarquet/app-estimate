@@ -11,8 +11,7 @@ module('Integration | Component | question-component', function(hooks) {
     // Handle any actions with this.set('myAction', function(val) { ... });
 
     this.set('question', {
-      title: "How to do that ?",
-      description: "Lorem ipsum"
+      title: "How to do that ?"
     });
 
     await render(hbs`{{question-component question=question}}`);
