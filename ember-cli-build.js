@@ -8,7 +8,7 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false,
-      whitelist: ['bs-tooltip', 'bs-button', 'bs-progress'],
+      whitelist: ['bs-tooltip', 'bs-button', 'bs-progress', 'bs-dropdown'],
     }
   });
 

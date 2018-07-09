@@ -3,7 +3,7 @@
 ////////////////////////////////////////
 
 html, body{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body>div.ember-view,
@@ -19,4 +19,8 @@ footer{
 
 h1{
   text-align: center;
+}
+
+.question-container{
+  min-height: 500px;
 }

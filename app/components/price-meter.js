@@ -6,7 +6,7 @@ export default Component.extend({
   dailyCost: 400,
 
   totalPrice: computed('dailyCost', 'totalDuration', function(){
-    let { dailyCost, totalDuration, coefficientTotal } = this;
+    let { dailyCost, totalDuration } = this;
     return dailyCost * totalDuration ;
   }),
 
@@ -19,7 +19,7 @@ export default Component.extend({
   totalDuration: computed('coefficientTotal', 'duration', function(){
     let { duration, coefficientTotal } = this;
     let a = Number.parseFloat(duration * (1.0 + coefficientTotal)).toFixed(2);
-    return Math.round(a*2)/2;;
+    return Math.round(a*2)/2;
   }),
 
   coefficientTotal: computed('model.@each.coefficientTotal', function(){

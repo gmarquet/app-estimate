@@ -1,5 +1,7 @@
 <img class="answer-image" src="{{answer.image}}">
 <h4 class="answer-text">{{answer.text}}</h4>
-{{#bs-tooltip placement="bottom"}}
-  {{answer.description}}
-{{/bs-tooltip}}
+{{#if answer.description}}
+  {{#bs-tooltip placement="bottom"}}
+    {{answer.description}}
+  {{/bs-tooltip}}
+{{/if}}

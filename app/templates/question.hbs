@@ -14,7 +14,7 @@
     {{/each}}
   </div>
   {{#if (or model.multiple model.passable)}}
-    {{#bs-button type="primary" click=(action "next")}}
+    {{#bs-button class="button-next" type="primary" click=(action "next")}}
       Question suivante
     {{/bs-button}}
   {{/if}}

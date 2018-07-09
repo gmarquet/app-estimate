@@ -5,7 +5,6 @@
 {{/bs-progress}}
 <div class="delivery-time">
   {{#if deliveryTime}}
-    Durée de livraison : {{deliveryTime}} semaine{{if (gt deliveryTime 1) 's'}}
+    Durée de livraison : <span>{{deliveryTime}}</span> semaine{{if (gt deliveryTime 1) 's'}}
   {{/if}}
 </div>
-<hr>

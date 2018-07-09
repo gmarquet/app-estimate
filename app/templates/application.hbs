@@ -1,10 +1,18 @@
 <div class="container d-flex flex-column">
-  <h1>Estimez le cout de votre application web</h1>
-  {{price-meter model=model}}
-  <div class="row flex-fill">
-    {{question-list class="col-1 d-flex flex-column justify-content-between" questions=model}}
-    <div class="col-11">
-      {{outlet}}
+  <h1>{{t "application.title"}}</h1>
+  {{language-selector}}
+  <div class="d-flex flex-grow  flex-column">
+    <div class="d-flex justify-content-end">
+      {{price-meter model=model }}
+    </div>
+    <div class="d-flex flex-grow question-container">
+      {{question-list
+        class="col-1 d-flex flex-column justify-content-between"
+        questions=model
+      }}
+      <div class="col-11">
+        {{outlet}}
+      </div>
     </div>
   </div>
   <footer>

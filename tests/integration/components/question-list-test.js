@@ -17,10 +17,11 @@ module('Integration | Component | question-list', function(hooks) {
   });
 
   test('it renders', async function(assert) {
-    this.set('questions', [{},{},{},{},{},])
+    this.set('questions', [{id: "1"},{id: "2"},{id: "3"},{id: "4"},{id: "5"}])
     await render(hbs`{{question-list questions=questions}}`);
 
     assert.equal(this.$('a').length, 5);
+    assert.equal(this.$('.divider').length, 4);
 
   });
 

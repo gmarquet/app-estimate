@@ -1,0 +1,12 @@
+{{#bs-dropdown as |dd|}}
+  {{#dd.button}}{{i18n.locale}} <span class="caret"></span>{{/dd.button}}
+  {{#dd.menu as |menu|}}
+    {{#each i18n.locales as |l|}}
+      {{#menu.item}}
+        <a href="#" class="dropdown-item {{if (eq get intl.locale l) "active"}}" onclick={{action 'setLocale' l}}>
+          {{l}}
+        </a>
+    {{/menu.item}}
+    {{/each}}
+  {{/dd.menu}}
+{{/bs-dropdown}}
