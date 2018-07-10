@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="gmdev-logo.svg"
+   inkscape:export-filename="C:\Users\Gaëtan\Pictures\gmdev-logo.png"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-394.71623"
+     inkscape:cy="274.38141"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="49.703869,66.334821"
+       orientation="1,0"
+       id="guide4533"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="57.830357,49.892857"
+       orientation="0,1"
+       id="guide4535"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-197)">
+    <g
+       id="g4491"
+       transform="matrix(0.4456059,0,0,0.4456059,4.6428895,215.90027)"
+       style="fill:#4d4d4d;fill-opacity:1">
+      <path
+         id="path4487"
+         d="M 177.937,21.107 C 170.382,18.776 114.507,9.427 101.802,8.924 89.096,9.427 33.224,18.776 25.666,21.107 25.393,36.686 10.386,69.791 10.386,69.791 v 0 0 c 0,0 15.008,33.106 15.28,48.685 7.558,2.33 63.43,11.68 76.136,12.183 12.705,-0.503 68.58,-9.854 76.135,-12.183 0.273,-15.579 15.28,-48.685 15.28,-48.685 v 0 0 c 0,-10e-4 -15.007,-33.106 -15.28,-48.684 z"
+         style="fill:#4d4d4d;fill-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path4489"
+         d="M 202.322,67.019 V 67.018 C 198.116,57.761 187.152,31.05 186.937,18.779 l -0.085,-4.588 -3.973,-1.228 C 175.252,10.612 115.756,0.551 102.006,0.01 L 101.804,0 101.593,0.01 C 87.828,0.552 28.345,10.613 20.726,12.965 l -3.979,1.227 -0.081,4.588 C 16.456,30.997 5.491,57.741 1.284,67.015 L 0.023,69.793 0.024,69.795 0,69.849 l 0.164,0.253 1.12,2.463 c 4.207,9.275 15.172,36.021 15.383,48.237 l 0.081,4.589 3.978,1.228 c 7.621,2.351 67.104,12.411 80.859,12.953 l 0.219,0.012 0.192,-0.012 c 13.763,-0.541 73.258,-10.602 80.883,-12.954 l 3.972,-1.227 0.085,-4.589 c 0.214,-12.266 11.178,-38.98 15.385,-48.24 l 1.254,-2.771 z m -5.767,9.136 c -4.281,10.137 -13.221,32.679 -13.435,44.571 l -0.023,1.544 -1.267,0.391 c -7.527,2.319 -66.349,12.257 -79.963,12.797 l -0.049,0.002 -0.075,-0.001 C 88.12,134.918 29.3,124.98 21.773,122.662 l -1.268,-0.392 -0.026,-1.545 C 20.264,108.446 10.731,84.792 6.642,75.192 5.458,72.413 4.711,70.761 4.704,70.746 L 4.27,69.791 4.702,68.84 c 0.07,-0.153 0.839,-1.865 1.939,-4.449 4.089,-9.6 13.622,-33.255 13.837,-45.533 l 0.026,-1.545 1.268,-0.391 C 29.306,14.602 88.128,4.664 101.743,4.124 l 0.031,-0.003 0.083,0.003 c 13.615,0.54 72.44,10.477 79.973,12.797 l 1.267,0.392 0.023,1.546 c 0.213,11.888 9.154,34.431 13.435,44.569 h -0.007 l 0.411,0.964 c 1.167,2.737 1.908,4.383 1.938,4.445 l 0.435,0.955 -0.435,0.953 c -0.066,0.142 -0.822,1.831 -1.938,4.448 l -0.406,0.964 h 0.002 z"
+         style="fill:#4d4d4d;fill-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.9604187px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.37401041"
+       x="19.396156"
+       y="252.4458"
+       id="text4504"><tspan
+         sodipodi:role="line"
+         id="tspan4502"
+         x="19.396156"
+         y="252.4458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#ffffff;stroke-width:0.37401041">GM DEV</tspan></text>
+  </g>
+</svg>

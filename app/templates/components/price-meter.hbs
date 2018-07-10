@@ -1,10 +1,11 @@
+<h4>Estimation :</h4>
 {{#bs-progress  as |p|}}
-  {{#p.bar value=totalPrice min=0 maxValue=30000 showLabel=true label=totalPrice}}
+  {{#p.bar value=totalPrice min=0 maxValue=20000 showLabel=true label=totalPrice}}
     {{totalPrice}}€
   {{/p.bar}}
 {{/bs-progress}}
 <div class="delivery-time">
   {{#if deliveryTime}}
-    Durée de livraison : <span>{{deliveryTime}}</span> semaine{{if (gt deliveryTime 1) 's'}}
+    Durée de réalisation : <span>{{deliveryTime}}</span> semaine{{if (gt deliveryTime 1) 's'}}
   {{/if}}
 </div>

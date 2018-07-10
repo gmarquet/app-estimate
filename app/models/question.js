@@ -4,8 +4,10 @@ import { get, computed } from '@ember/object';
 const { attr, hasMany } = DS;
 
 export default DS.Model.extend({
-  title: attr('string'),
-  description: attr('string'),
+  title_fr: attr('string'),
+  title_en: attr('string'),
+  description_fr: attr('string'),
+  description_en: attr('string'),
   image: attr('string', {defaultValue: "default-question.png}"}),
   multiple: attr('boolean'),
   passable: attr('boolean'),

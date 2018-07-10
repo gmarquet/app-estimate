@@ -1,10 +1,24 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import Service from '@ember/service';
+
+
+const i18nStub = Service.extend({
+  locale: 'fr',
+  init(){
+    this._super(...arguments);
+    this.locales = ['fr', 'en'];
+  }
+});
 
 module('Integration | Component | language-selector', function(hooks) {
   setupRenderingTest(hooks);
+
+  hooks.beforeEach(function() {
+    this.owner.register('service:i18n', i18nStub);
+  });
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
@@ -12,15 +26,10 @@ module('Integration | Component | language-selector', function(hooks) {
 
     await render(hbs`{{language-selector}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.$('a').length, 2);
+    assert.equal(this.$('.btn').text().trim(), "fr");
 
-    // Template block usage:
-    await render(hbs`
-      {{#language-selector}}
-        template block text
-      {{/language-selector}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    await click('a:last-of-type');
+    assert.equal(this.$('.btn').text().trim(), "en");
   });
 });

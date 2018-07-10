@@ -1,21 +1,37 @@
 <div class="question">
-  <h3 class="question-title">
-    {{model.title}}
-    {{#bs-tooltip placement="bottom"}}
-      {{model.description}}
-    {{/bs-tooltip}}
-  </h3>
+  <div class="row">
+    <div class="col-8">
+      <h3 class="question-title">
+        {{m-t model  "title"}}
+      </h3>
+
+      <p>{{m-t model  "description"}}</p>
+    </div>
+    <div class="col-4">
+      {{price-meter model=questions }}
+    </div>
+  </div>
 
   <div class="answers row">
     {{#each model.answers as |a|}}
-      {{answer-component class="col-3" answer=a click=(action "select" a)}}
+      {{#if (gt model.answers.length 3)}}
+        <div class="col-3">
+          {{answer-component answer=a click=(action "select" a)}}
+        </div>
+      {{else}}
+        <div class="col">
+          {{answer-component answer=a click=(action "select" a)}}
+        </div>
+      {{/if}}
     {{else}}
-      No answer for this question
+      {{t 'question.no-anwser'}}
     {{/each}}
   </div>
-  {{#if (or model.multiple model.passable)}}
-    {{#bs-button class="button-next" type="primary" click=(action "next")}}
-      Question suivante
-    {{/bs-button}}
-  {{/if}}
+  <div class="text-center">
+    {{#if (or model.multiple model.passable)}}
+      {{#bs-button class="button-next btn-lg" type="primary" click=(action "next")}}
+        {{t 'question.next-button'}}
+      {{/bs-button}}
+    {{/if}}
+  </div>
 </div>

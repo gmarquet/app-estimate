@@ -1,13 +1,15 @@
-<div class="container d-flex flex-column">
-  <h1>{{t "application.title"}}</h1>
-  {{language-selector}}
+<nav class="navbar">
+  <div class="container">
+    <h1 class="col-8 offset-2">{{t "application.title"}}</h1>
+    {{language-selector class="col-2"}}
+  </div>
+</nav>
+
+<div class="container d-flex flex-column flex-grow">
   <div class="d-flex flex-grow  flex-column">
-    <div class="d-flex justify-content-end">
-      {{price-meter model=model }}
-    </div>
     <div class="d-flex flex-grow question-container">
       {{question-list
-        class="col-1 d-flex flex-column justify-content-between"
+        class="col-1"
         questions=model
       }}
       <div class="col-11">
@@ -15,7 +17,73 @@
       </div>
     </div>
   </div>
-  <footer>
-    Copyright
-  </footer>
 </div>
+
+<footer class="footer">
+  <div class="author">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5>A propos de l'auteur</h5>
+          <div class="card p-2 d-flex flex-column">
+            <div class="d-flex">
+              <img class="rounded-circle author-image" src="/assets/images/gaetan.png">
+              <div class="d-flex flex-column justify-content-between">
+                <strong>Gaëtan MARQUET</strong>
+                <em>Développeur freelance</em>
+                <a href="mailto:gaetan@gmdev.eu">gaetan@gmdev.eu</a>
+                <a href="tel:+33688356802">+33 6 88 35 68 02</a>
+              </div>
+            </div>
+            <ul class="list-inline author-social-links">
+              <li class="list-inline-item">
+                <a class="btn btn-secondary" target="_blank" href="https://www.linkedin.com/in/gaetanmarquet/">
+                  <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-secondary" target="_blank" href="#">
+                  <i class="fa fa-fw fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-secondary" target="_blank" href="#">
+                  <i class="fa fa-fw fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-secondary" target="_blank" href="#">
+                  <i class="fa fa-fw fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <h5>Technologies utilisées</h5>
+          <div class="card p-2  text-center">
+            <div class="techs d-flex justify-content-between">
+              <div class="tech">
+                <img src="/assets/images/techs/ember-js-logo.png">
+                <span>Ember JS</span>
+              </div>
+              <div class="tech">
+                <img src="/assets/images/techs/boostrap-logo.png">
+                <span>Bootstrap</span>
+              </div>
+              <div class="tech">
+                <img src="/assets/images/techs/font-awesome-logo.png">
+                <span>Fontawesome</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      Code source disponible ici : <a target="_blank" href="https://github.com/gmarquet/estimate-my-app" class="btn btn-secondary">{{fa-icon "github"}}</a>
+    </div>
+  </div>
+</footer>

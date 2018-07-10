@@ -3,13 +3,13 @@ import { get } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 export default Route.extend({
-  i18n: Ember.inject.service(),
+  i18n: service(),
   model(){
     return this.get('store').findAll('question', {include: 'answers'});
   },
   beforeModel() {
-    this.set('i18n.locales', ["fr-fr", 'en-us']);
-    return this.set('i18n.locale', "fr-fr");
+    this.set('i18n.locales', ["fr", 'en']);
+    return this.set('i18n.locale', "fr");
   },
 
   actions:{

@@ -1,3 +1,5 @@
+{{#link-to 'index' class="badge badge-success badge-icon"}}{{fa-icon 'home'}}{{/link-to}}
+<div class="divider"></div>
 {{#each questions as |question i|}}
   {{#question-link "question" question.id
     class="badge badge-primary"
@@ -6,7 +8,6 @@
   }}
     {{plus-one i}}
   {{/question-link}}
-  {{#unless (eq question.id questions.lastObject.id)}}
-    <div class="divider flex-fill"></div>
-  {{/unless}}
+  <div class="divider"></div>
 {{/each}}
+{{#link-to 'send-estimate' class="badge badge-primary badge-icon"}}{{fa-icon 'envelope'}}{{/link-to}}
