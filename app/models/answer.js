@@ -13,4 +13,5 @@ export default DS.Model.extend({
   coefficient: attr('number', {defaultValue: 0}),
 
   question: belongsTo('question'),
+
 });

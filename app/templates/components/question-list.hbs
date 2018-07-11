@@ -1,5 +1,5 @@
 {{#link-to 'index' class="badge badge-success badge-icon"}}{{fa-icon 'home'}}{{/link-to}}
-<div class="divider"></div>
+<div class="divider flex-fill"></div>
 {{#each questions as |question i|}}
   {{#question-link "question" question.id
     class="badge badge-primary"
@@ -8,6 +8,6 @@
   }}
     {{plus-one i}}
   {{/question-link}}
-  <div class="divider"></div>
+  <div class="divider flex-fill"></div>
 {{/each}}
 {{#link-to 'send-estimate' class="badge badge-primary badge-icon"}}{{fa-icon 'envelope'}}{{/link-to}}

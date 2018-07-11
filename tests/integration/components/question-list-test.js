@@ -20,8 +20,8 @@ module('Integration | Component | question-list', function(hooks) {
     this.set('questions', [{id: "1"},{id: "2"},{id: "3"},{id: "4"},{id: "5"}])
     await render(hbs`{{question-list questions=questions}}`);
 
-    assert.equal(this.$('a').length, 5);
-    assert.equal(this.$('.divider').length, 4);
+    assert.equal(this.$('a').length, 7);
+    assert.equal(this.$('.divider').length, 6);
 
   });
 
@@ -29,7 +29,7 @@ module('Integration | Component | question-list', function(hooks) {
     this.set('questions', [{id: "1"},{id: "2"},{id: "3"},{id: "4"},{id: "5"}])
     await render(hbs`{{question-list questions=questions}}`);
 
-    assert.ok(this.$('a:eq(2)').hasClass('active'));
-    assert.ok(!this.$('a:eq(1)').hasClass('active'));
+    assert.ok(this.$('a:eq(3)').hasClass('active'));
+    assert.ok(!this.$('a:eq(2)').hasClass('active'));
   });
 });

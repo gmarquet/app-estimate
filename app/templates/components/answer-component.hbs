@@ -1,13 +1,15 @@
-<span class="info badge badge-light">
+{{!-- <span class="info badge badge-light">
   {{fa-icon "info"}}
   {{#bs-popover placement="bottom" delayShow="400" triggerEvents="hover"}}
     {{m-t answer  "description"}}
   {{/bs-popover}}
-</span>
-<img class="answer-image" src="/assets/images/answers/{{answer.image}}">
+</span> --}}
+{{!-- <img class="answer-image" src="/assets/images/answers/{{answer.image}}"> --}}
 <h4 class="answer-text">
-  {{m-t answer  "text"}}
+  {{fa-icon "user"}} {{m-t answer  "text"}}
 </h4>
+
+
 {{!--
 {{#if answer.selected}}
   {{fa-icon "check-circle" class="answer-selected" size=50}}

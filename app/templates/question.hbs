@@ -1,37 +1,29 @@
 <div class="question">
-  <div class="row">
-    <div class="col-8">
-      <h3 class="question-title">
-        {{m-t model  "title"}}
-      </h3>
-
-      <p>{{m-t model  "description"}}</p>
+  {{#liquid-bind model use="question" as |currentModel|}}
+    <div class="row">
+      <div class="col-8">
+        <h3 class="question-title">
+          {{m-t currentModel  "title"}}
+        </h3>
+        <p>{{m-t currentModel  "description"}}</p>
+      </div>
     </div>
-    <div class="col-4">
-      {{price-meter model=questions }}
-    </div>
-  </div>
 
-  <div class="answers row">
-    {{#each model.answers as |a|}}
-      {{#if (gt model.answers.length 3)}}
-        <div class="col-3">
+    <div class="answers row">
+      {{#each currentModel.answers as |a|}}
+        <div class="col-3 m-0 p-0">
           {{answer-component answer=a click=(action "select" a)}}
         </div>
       {{else}}
-        <div class="col">
-          {{answer-component answer=a click=(action "select" a)}}
-        </div>
+        {{t 'question.no-anwser'}}
+      {{/each}}
+    </div>
+    <div class="text-center">
+      {{#if (or currentModel.multiple currentModel.passable)}}
+        {{#bs-button class="button-next btn-lg" type="primary" click=(action "next")}}
+          {{t 'question.next-button'}}
+        {{/bs-button}}
       {{/if}}
-    {{else}}
-      {{t 'question.no-anwser'}}
-    {{/each}}
-  </div>
-  <div class="text-center">
-    {{#if (or model.multiple model.passable)}}
-      {{#bs-button class="button-next btn-lg" type="primary" click=(action "next")}}
-        {{t 'question.next-button'}}
-      {{/bs-button}}
-    {{/if}}
-  </div>
+    </div>
+  {{/liquid-bind}}
 </div>

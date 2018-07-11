@@ -5,6 +5,6 @@ export default function( server ) {
     This data will not be loaded in your tests.
   */
 
-  server.loadFixtures('questions');
   server.loadFixtures('answers');
+  server.loadFixtures('questions');
 }

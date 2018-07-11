@@ -3,21 +3,35 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import $ from 'jquery';
+import Service from '@ember/service';
+
+
+const i18nStub = Service.extend({
+  locale: 'fr',
+  init(){
+    this._super(...arguments);
+    this.locales = ['fr', 'en'];
+  }
+});
+
 
 module('Integration | Component | answer-component', function(hooks) {
   setupRenderingTest(hooks);
 
+  hooks.beforeEach(function() {
+    this.owner.register('service:i18n', i18nStub);
+  });
+
   test('it renders', async function(assert) {
     this.set('answer', {
       image: 'answer.png',
-      text: 'lorem ipsum',
+      text_fr: 'lorem ipsum',
     });
     await render(hbs`{{answer-component answer=answer}}`);
 
-    assert.equal(this.$('.answer-image').attr('src'), '/assets/images/answers/answer.png');
     assert.equal(this.$('.answer-text').text().trim(), 'lorem ipsum');
     assert.ok(!$(".answer").hasClass("selected"));
-    await click('img');
+    await click('h4');
     assert.ok(!$(".answer").hasClass("selected"));
 
   });

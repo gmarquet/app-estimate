@@ -27,9 +27,9 @@ module('Integration | Component | language-selector', function(hooks) {
     await render(hbs`{{language-selector}}`);
 
     assert.equal(this.$('a').length, 2);
-    assert.equal(this.$('.btn').text().trim(), "fr");
+    assert.equal(this.$('img').attr("src"), "/assets/images/fr.png");
 
     await click('a:last-of-type');
-    assert.equal(this.$('.btn').text().trim(), "en");
+    assert.equal(this.$('img').attr("src"), "/assets/images/en.png");
   });
 });

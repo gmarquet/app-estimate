@@ -2,7 +2,8 @@
   cursor: pointer;
   position:relative;
   margin-bottom: 1rem;
-  border-width: 0.3rem;
+  // border-width: 0.3rem;
+  border: none;
   height: 100%;
   &:hover{
     background: #f8f9fa;
@@ -17,7 +18,7 @@
     background: #eee;
   }
   &.selected{
-    border-color: green;
+    // border-color: green;
   }
   .answer-text{
     text-align: center;

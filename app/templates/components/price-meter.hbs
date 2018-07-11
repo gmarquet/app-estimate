@@ -1,9 +1,38 @@
 <h4>Estimation :</h4>
-{{#bs-progress  as |p|}}
-  {{#p.bar value=totalPrice min=0 maxValue=20000 showLabel=true label=totalPrice}}
-    {{totalPrice}}€
-  {{/p.bar}}
-{{/bs-progress}}
+{{#bs-button class="btn-sm"onClick=(action "toggleDetails")}}
+  {{if showDetails "cacher détails" "Afficher détails"}}
+{{/bs-button}}
+{{#liquid-if showDetails}}
+  <table class="table table-dark table-sm">
+    <tbody>
+        {{#each model as |q|}}
+          {{#if q.hasOneAnswer}}
+            <tr>
+              <td colspan="2">{{m-t q  "title"}}</td>
+            </tr>
+            {{#each q.answers as |a|}}
+              {{#if a.selected}}
+                <tr class="table-secondary">
+                  <td>{{m-t a  "text"}}</td>
+                  <td  class="text-right">{{format-price (calculate-price dailyCost coefficientTotal a.duration)}}</td>
+                </tr>
+              {{/if}}
+            {{/each}}
+          {{/if}}
+        {{/each}}
+    </tbody>
+  </table>
+{{/liquid-if}}
+
+<table class="table table-dark table-sm">
+  <tbody>
+    <tr>
+      <th>Total</th>
+      <th class="text-right">{{format-price totalPrice}}</th>
+    </tr>
+  </tbody>
+</table>
+
 <div class="delivery-time">
   {{#if deliveryTime}}
     Durée de réalisation : <span>{{deliveryTime}}</span> semaine{{if (gt deliveryTime 1) 's'}}

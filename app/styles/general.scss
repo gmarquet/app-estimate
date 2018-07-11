@@ -2,14 +2,16 @@
 ///// Layout
 ////////////////////////////////////////
 
-html, body{
+html,
+body,
+body>div.ember-view{
   min-height: 100vh;
+  position: relative;
 }
 
-body>div.ember-view,
-body>div.ember-view > .container{
-  height: 100%;
-  position: relative;
+body>div.ember-view{
+  flex-direction: column !important;
+  display: flex !important;
 }
 
 .navbar{

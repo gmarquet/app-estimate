@@ -5,16 +5,20 @@
   </div>
 </nav>
 
-<div class="container d-flex flex-column flex-grow">
-  <div class="d-flex flex-grow  flex-column">
-    <div class="d-flex flex-grow question-container">
-      {{question-list
-        class="col-1"
-        questions=model
-      }}
-      <div class="col-11">
-        {{outlet}}
-      </div>
+<div class="container d-flex flex-column flex-fill">
+  <div class="row">
+    {{question-list
+      class="col-12 d-flex justify-content-between align-items-center"
+      questions=model
+    }}
+  </div>
+  <hr>
+  <div class="row d-flex flex-grow question-container flex-fill">
+    <div class="col-8">
+      {{liquid-outlet}}
+    </div>
+    <div class="col-4">
+      {{price-meter model=model }}
     </div>
   </div>
 </div>

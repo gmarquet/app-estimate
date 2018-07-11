@@ -1,0 +1,27 @@
+
+{{#bs-form model=this onSubmit=(action "sendEmail") as |form|}}
+  {{form.element controlType="email" label="Email" placeholder="Email" property="email" required=true}}
+{{/bs-form}}
+{{#bs-button onClick=(action "sendEmail")}}
+  Envoyer l'email
+{{/bs-button}}
+
+
+
+<div id="email-subject">Demande de prise de contacte suite à estimation.</div>
+
+<p id="email-content">
+  {{~#each model as |q|~}}
+    {{~#if q.hasOneAnswer~}}
+      {{m-t q  "title"}}<br/>
+      {{~#each q.answers as |a|~}}
+        {{~#if a.selected~}}
+          {{~m-t a  "text"~}} : {{~format-price (calculate-price dailyCost coefficientTotal a.duration)~}}<br>
+        {{/if}}
+      {{/each}}
+      <br/>
+    {{/if}}
+  {{/each}}
+  <br/>
+  Total : {{~format-price totalPrice~}}
+</p>

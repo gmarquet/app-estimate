@@ -1,7 +1,8 @@
 &{
   text-align: center;
+  position: relative;
   .badge {
-    display: inline-block;
+    display: block;
     cursor: pointer;
     border-radius: 50%;
     font-size: 2rem;
@@ -9,8 +10,9 @@
     height: 3rem;
   }
   .divider{
-    margin: 0 50%;
-    min-height: 15px;
+    // margin: 50% 0;
+    min-width: 15px;
+    height: 0;
     border: 1px grey solid;
   }
   .badge-icon{

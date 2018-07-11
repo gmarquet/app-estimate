@@ -14,13 +14,13 @@ export default Route.extend({
 
   actions:{
     transitionToNextQuestion(){
-      let invalidQuestion = this.modelFor('application').find(function(q){
-        return !get(q, 'isValid');
-      });
+      let questions = this.modelFor('application');
+      let q = this.modelFor('question');
 
-      if(invalidQuestion) return this.transitionTo("question", invalidQuestion);
+      if(get(q, 'id') === get(questions, "lastObject.id")) return this.transitionTo("send-estimate");
 
-      return this.transitionTo("send-estimate");
+      return this.transitionTo("question", questions.objectAt(questions.indexOf(q) + 1));
+
 
     },
   }
