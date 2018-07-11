@@ -23,5 +23,14 @@ export default Route.extend({
 
 
     },
+    transitionToPrevQuestion(){
+      let questions = this.modelFor('application');
+      let q = this.modelFor('question');
+
+      if(get(q, 'id') === get(questions, "firstObject.id")) return this.transitionTo("index");
+
+      return this.transitionTo("question", questions.objectAt(questions.indexOf(q) - 1));
+
+    },
   }
 });

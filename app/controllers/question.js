@@ -18,6 +18,9 @@ export default Controller.extend({
         model.set('passed', true);
       }
       this.send('transitionToNextQuestion');
+    },
+    prev(){
+      this.send('transitionToPrevQuestion');
     }
   }
 });

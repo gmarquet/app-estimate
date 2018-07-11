@@ -19,11 +19,12 @@
       {{/each}}
     </div>
     <div class="text-center">
-      {{#if (or currentModel.multiple currentModel.passable)}}
-        {{#bs-button class="button-next btn-lg" type="primary" click=(action "next")}}
-          {{t 'question.next-button'}}
-        {{/bs-button}}
-      {{/if}}
+      {{#bs-button class="button-prev btn-lg" type="primary" click=(action "prev")}}
+        {{t 'question.prev-button'}}
+      {{/bs-button}}
+      {{#bs-button class="button-next btn-lg" type="primary" click=(action "next")}}
+        {{t 'question.next-button'}}
+      {{/bs-button}}
     </div>
   {{/liquid-bind}}
 </div>

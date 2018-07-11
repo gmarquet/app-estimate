@@ -4,7 +4,7 @@
 {{/bs-form}} --}}
 
 
-{{#bs-button onClick=(action "sendEmail")}}
+{{#bs-button class="button-send-email" onClick=(action "sendEmail")}}
   Envoyer un email
 {{/bs-button}}
 
@@ -12,7 +12,7 @@
 <div id="email-subject">Demande de prise de contacte suite à estimation.({{format-price totalPrice "euro"}})</div>
 
 <div id="email-content">
-<p>Voici les réponses au questionnaires.</p>
+<p>Voici les réponses au questionnaire.</p>
 <p>-----------------------------------</p>
 <p>Total : {{format-price totalPrice "euro"}}</p>
 <p>-----------------------------------</p>
