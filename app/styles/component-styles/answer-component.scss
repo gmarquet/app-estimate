@@ -1,38 +1,16 @@
 &{
   cursor: pointer;
   position:relative;
-  margin-bottom: 1rem;
-  // border-width: 0.3rem;
-  border: none;
-  height: 100%;
+  border-width: 1px;
+  text-align: center;
+  // border: none;
+  border-radius: 0;
   &:hover{
     background: #f8f9fa;
   }
   &.selected{
-    border-color:green;
+    background:#28a745;
   }
-  img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-    background: #eee;
-  }
-  &.selected{
-    // border-color: green;
-  }
-  .answer-text{
-    text-align: center;
-  }
-  // .answer-selected{
-  //   position: absolute;
-  //   top: 50%;
-  //   right: 50%;
-  //   color: green;
-  //   border-radius: 50%;
-  //   &:before{
-  //     font-size: 40px;
-  //   }
-  // }
   .info{
     position: absolute;
     top: 5px;
@@ -42,5 +20,10 @@
     height: 2rem;
     width: 2rem;
     font-size: 1.2rem;
+  }
+  svg.svg-inline--fa{
+    font-size: 5rem;
+    padding: 1rem;
+    width: 100%;
   }
 }

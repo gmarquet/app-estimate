@@ -1,30 +1,22 @@
 <div class="question">
+  {{#bs-button class="button-prev btn-small" type="primary" click=(action "prev")}}
+    {{fa-icon "chevron-left" prefix="fas"}}
+  {{/bs-button}}
+  {{#bs-button class="button-next btn-small" type="primary" click=(action "next")}}
+    {{fa-icon "chevron-right" prefix="fas"}}
+  {{/bs-button}}
   {{#liquid-bind model use="question" as |currentModel|}}
-    <div class="row">
-      <div class="col-8">
-        <h3 class="question-title">
-          {{m-t currentModel  "title"}}
-        </h3>
-        <p>{{m-t currentModel  "description"}}</p>
-      </div>
-    </div>
+    <h3 class="question-title">
+      {{m-t currentModel  "title"}}
+    </h3>
+    <p>{{m-t currentModel  "description"}}</p>
 
-    <div class="answers row">
+    <div class="answers d-flex flex-wrap align-content-around">
       {{#each currentModel.answers as |a|}}
-        <div class="col-3 m-0 p-0">
-          {{answer-component answer=a click=(action "select" a)}}
-        </div>
+        {{answer-component class="flex-fill col-3 m-0" answer=a click=(action "select" a)}}
       {{else}}
         {{t 'question.no-anwser'}}
       {{/each}}
-    </div>
-    <div class="text-center">
-      {{#bs-button class="button-prev btn-lg" type="primary" click=(action "prev")}}
-        {{t 'question.prev-button'}}
-      {{/bs-button}}
-      {{#bs-button class="button-next btn-lg" type="primary" click=(action "next")}}
-        {{t 'question.next-button'}}
-      {{/bs-button}}
     </div>
   {{/liquid-bind}}
 </div>

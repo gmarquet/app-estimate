@@ -1,8 +1,15 @@
 <h4>Estimation :</h4>
-{{#bs-button class="btn-sm"onClick=(action "toggleDetails")}}
-  {{if showDetails "cacher détails" "Afficher détails"}}
-{{/bs-button}}
-{{#liquid-if showDetails}}
+<div class="text-right">
+  {{#bs-button class="btn-sm"onClick=(action "toggleDetails")}}
+    {{#if showDetails}}
+      Cacher les détails
+    {{else}}
+      Afficher les détails
+    {{/if}}
+  {{/bs-button}}
+</div>
+
+{{#bs-collapse collapsed=(not showDetails)}}
   <table class="table table-dark table-sm">
     <tbody>
         {{#each model as |q|}}
@@ -22,7 +29,10 @@
         {{/each}}
     </tbody>
   </table>
-{{/liquid-if}}
+{{/bs-collapse}}
+
+{{!-- {{#liquid-if showDetails}} --}}
+{{!-- {{/liquid-if}} --}}
 
 <table class="table table-dark table-sm">
   <tbody>

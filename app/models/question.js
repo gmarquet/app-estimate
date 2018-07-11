@@ -8,7 +8,7 @@ export default DS.Model.extend({
   title_en: attr('string'),
   description_fr: attr('string'),
   description_en: attr('string'),
-  image: attr('string', {defaultValue: "default-question.png}"}),
+  icon: attr('string', {defaultValue: "question"}),
   multiple: attr('boolean'),
   passable: attr('boolean'),
   passed: attr('boolean'),

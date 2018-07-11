@@ -71,3 +71,17 @@ h1{
 }
 
 
+.question{
+  text-align: center;
+  .button-prev,
+  .button-next{
+    margin: 2px;
+  }
+  .button-prev{
+    float: left;
+  }
+  .button-next{
+    float: right;
+  }
+}
+

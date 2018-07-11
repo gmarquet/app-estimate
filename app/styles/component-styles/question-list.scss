@@ -4,10 +4,8 @@
   .badge {
     display: block;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 2rem;
-    width: 3rem;
-    height: 3rem;
+    font-size: 1rem;
+    padding: 1rem;
   }
   .divider{
     // margin: 50% 0;
@@ -15,8 +13,5 @@
     height: 0;
     border: 1px grey solid;
   }
-  .badge-icon{
-    padding: 0.2em 0;
-    margin:0;
-  }
+
 }

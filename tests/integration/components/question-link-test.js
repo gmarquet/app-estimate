@@ -22,15 +22,15 @@ module('Integration | Component | question-link', function(hooks) {
     assert.ok(this.$('a').hasClass('badge-primary'));
 
     run(() =>{
-      this.set('active', true);
-    });
-
-    assert.ok(this.$('a').hasClass('badge-secondary'));
-
-    run(() =>{
       this.set('isValid', true);
     });
 
     assert.ok(this.$('a').hasClass('badge-success'));
+
+    run(() =>{
+      this.set('active', true);
+    });
+
+    assert.ok(this.$('a').hasClass('badge-secondary'));
   });
 });

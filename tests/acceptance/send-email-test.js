@@ -13,31 +13,31 @@ module('Acceptance | send email', function(hooks) {
 
     await click('.start-questions');
 
-    await click(('.answers :nth-child(2) .answer'));
+    await click(('.answers :nth-child(2)'));
     assert.equal(currentURL(), '/2');
 
-    await click(('.answers :nth-child(3) .answer'));
+    await click(('.answers :nth-child(3)'));
     assert.equal(currentURL(), '/3');
 
-    await click(('.answers :nth-child(2) .answer'));
+    await click(('.answers :nth-child(2)'));
     assert.equal(currentURL(), '/4');
 
-    await click(('.answers :nth-child(1) .answer'));
-    await click(('.answers :nth-child(2) .answer'));
-    await click(('.answers :nth-child(4) .answer'));
+    await click(('.answers :nth-child(1)'));
+    await click(('.answers :nth-child(2)'));
+    await click(('.answers :nth-child(4)'));
     await click(('.button-next'));
     assert.equal(currentURL(), '/5');
 
-    await click(('.answers :nth-child(1) .answer'));
-    await click(('.answers :nth-child(2) .answer'));
-    await click(('.answers :nth-child(4) .answer'));
-    await click(('.answers :nth-child(5) .answer'));
-    await click(('.answers :nth-child(6) .answer'));
+    await click(('.answers :nth-child(1)'));
+    await click(('.answers :nth-child(2)'));
+    await click(('.answers :nth-child(4)'));
+    await click(('.answers :nth-child(5)'));
+    await click(('.answers :nth-child(6)'));
     await click(('.button-next'));
     assert.equal(currentURL(), '/6');
 
-    await click(('.answers :nth-child(3) .answer'));
-    await click(('.answers :nth-child(2) .answer'));
+    await click(('.answers :nth-child(3)'));
+    await click(('.answers :nth-child(2)'));
     await click(('.button-next'));
     assert.equal(currentURL(), '/7');
 

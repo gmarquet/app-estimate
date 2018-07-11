@@ -6,15 +6,13 @@
 </nav>
 
 <div class="container d-flex flex-column flex-fill">
-  <div class="row">
-    {{question-list
-      class="col-12 d-flex justify-content-between align-items-center"
-      questions=model
-    }}
-  </div>
-  <hr>
   <div class="row d-flex flex-grow question-container flex-fill">
     <div class="col-8">
+      {{question-list
+        class="d-flex justify-content-between align-items-center"
+        questions=model
+      }}
+      <hr>
       {{liquid-outlet}}
     </div>
     <div class="col-4">
@@ -42,22 +40,22 @@
             <ul class="list-inline author-social-links">
               <li class="list-inline-item">
                 <a class="btn btn-secondary" target="_blank" href="https://www.linkedin.com/in/gaetanmarquet/">
-                  <i class="fa fa-fw fa-linkedin"></i>
+                  {{fa-icon "linkedin" prefix="fab"}}
                 </a>
               </li>
               <li class="list-inline-item">
                 <a class="btn btn-secondary" target="_blank" href="#">
-                  <i class="fa fa-fw fa-github"></i>
+                  {{fa-icon "github" prefix="fab"}}
                 </a>
               </li>
               <li class="list-inline-item">
                 <a class="btn btn-secondary" target="_blank" href="#">
-                  <i class="fa fa-fw fa-google-plus"></i>
+                  {{fa-icon "google-plus" prefix="fab"}}
                 </a>
               </li>
               <li class="list-inline-item">
                 <a class="btn btn-secondary" target="_blank" href="#">
-                  <i class="fa fa-fw fa-twitter"></i>
+                  {{fa-icon "twitter" prefix="fab"}}
                 </a>
               </li>
             </ul>
@@ -87,7 +85,7 @@
   </div>
   <div class="copyright py-4 text-center text-white">
     <div class="container">
-      Code source disponible ici : <a target="_blank" href="https://github.com/gmarquet/estimate-my-app" class="btn btn-secondary">{{fa-icon "github"}}</a>
+      Code source disponible ici : <a target="_blank" href="https://github.com/gmarquet/estimate-my-app" class="btn btn-secondary">{{fa-icon "github" prefix="fab"}}</a>
     </div>
   </div>
 </footer>

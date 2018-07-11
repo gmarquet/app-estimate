@@ -4,6 +4,7 @@ export default [
     title_en: 'How big is your app?',
     description_fr: 'Cette application d\'estimation est une application de petite taille (1-5 pages et 1-2 fonctionnalités).',
     description_en: 'This estimate app is a small-sized app (1-5 pages and 1-2 features).',
+    icon: "file",
     answerIds: [1,2,3,4]
   },
   { id: 2,
@@ -11,6 +12,7 @@ export default [
     title_en: 'What would your UI theme be?',
     description_fr: 'Le niveau de finition comprend le niveau de détails du design, tests automatisés et performances.',
     description_en: 'The level of finish contains the level of detail in design, automated testing and performances.',
+    icon: "palette",
     answerIds: [5,6,7]
   },
   { id: 3,
@@ -18,6 +20,7 @@ export default [
     title_en: 'What level of finish do you want?',
     description_fr: 'Le niveau de finition comprend le niveau de détails du design, tests automatisés et performances.',
     description_en: 'The level of finish contains the level of detail in design, automated testing and performances.',
+    icon: "paint-roller",
     answerIds: [8,9,10]
   },
   { id: 4,
@@ -27,6 +30,7 @@ export default [
     title_en: 'Features : User & accounts',
     description_fr: 'Toutes les fonctionnalités qui concernent l\'inscription, connexion et compte utilisateurs.',
     description_en: 'All the features that concern registration, sign up and user account.',
+    icon: "users",
     answerIds:[11,12,13,14,15,16,17,18]
   },
   { id: 5,
@@ -36,6 +40,7 @@ export default [
     title_en: 'Features : User Generated Content',
     description_fr: '',
     description_en: '',
+    icon: "id-card",
     answerIds:[19,20,21,22,23,24,25,26]
   },
   { id: 6,
@@ -45,6 +50,7 @@ export default [
     title_en: 'Features : Dates & Locations',
     description_fr: '',
     description_en: '',
+    icon: "map",
     answerIds:[27,28,29,30]
   },
   { id: 7,
@@ -54,6 +60,7 @@ export default [
     title_en: 'Features : Social',
     description_fr: '',
     description_en: '',
+    icon: "comments",
     answerIds:[31,32,33,34,35,36]
   },
   { id: 8,
@@ -63,6 +70,7 @@ export default [
     title_en: 'Features : Billing & eCommerce',
     description_fr: '',
     description_en: '',
+    icon: "money-bill",
     answerIds:[37,38,39,40,41]
   },
   { id: 9,
@@ -72,6 +80,7 @@ export default [
     title_en: 'Features : Admin & API',
     description_fr: '',
     description_en: '',
+    icon: "cogs",
     answerIds:[42,43,44,45,46,47]
   },
 ];

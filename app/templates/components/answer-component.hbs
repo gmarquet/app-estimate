@@ -1,17 +1,10 @@
-{{!-- <span class="info badge badge-light">
-  {{fa-icon "info"}}
-  {{#bs-popover placement="bottom" delayShow="400" triggerEvents="hover"}}
-    {{m-t answer  "description"}}
+  {{#if answer.selected}}
+    {{fa-icon "check" size=50}}
+  {{else}}
+    {{fa-icon answer.icon size=50}}
+  {{/if}}
+  <h4>{{m-t answer "text"}}</h4>
+  {{#bs-popover triggerEvents="hover" placement="bottom" title="Description"}}
+    {{m-t answer "description"}}
   {{/bs-popover}}
-</span> --}}
-{{!-- <img class="answer-image" src="/assets/images/answers/{{answer.image}}"> --}}
-<h4 class="answer-text">
-  {{fa-icon "user"}} {{m-t answer  "text"}}
-</h4>
 
-
-{{!--
-{{#if answer.selected}}
-  {{fa-icon "check-circle" class="answer-selected" size=50}}
-{{/if}}
- --}}

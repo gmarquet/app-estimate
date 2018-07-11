@@ -6,6 +6,7 @@ export default Component.extend({
   router: service(),
   classNames: ['question-list'],
 
+  currentRouteName: computed.readOnly('router.currentRouteName'),
   currentQuestionId: computed('router.{currentRouteName,currentURL}', function(){
     if(get(this, 'router.currentRouteName') !== 'question') return;
 

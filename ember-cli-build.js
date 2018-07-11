@@ -8,7 +8,13 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false,
-      whitelist: ['bs-tooltip', 'bs-button', 'bs-dropdown', 'bs-popover', 'bs-form'],
+      whitelist: [
+        'bs-tooltip',
+        'bs-button',
+        'bs-dropdown',
+        'bs-popover',
+        'bs-collapse'
+      ],
     },
     numeral: {
       includeLocales: ['fr']

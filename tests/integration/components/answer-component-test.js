@@ -24,15 +24,15 @@ module('Integration | Component | answer-component', function(hooks) {
 
   test('it renders', async function(assert) {
     this.set('answer', {
-      image: 'answer.png',
       text_fr: 'lorem ipsum',
     });
     await render(hbs`{{answer-component answer=answer}}`);
 
-    assert.equal(this.$('.answer-text').text().trim(), 'lorem ipsum');
+    assert.equal(this.$('h4').text().trim(), 'lorem ipsum');
     assert.ok(!$(".answer").hasClass("selected"));
     await click('h4');
     assert.ok(!$(".answer").hasClass("selected"));
+
 
   });
 });

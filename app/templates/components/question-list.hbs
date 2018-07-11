@@ -1,4 +1,10 @@
-{{#link-to 'index' class="badge badge-success badge-icon"}}{{fa-icon 'home'}}{{/link-to}}
+{{#question-link 'index'
+  class="badge badge-primary"
+  active=(eq currentRouteName 'index')
+  isValid=true
+}}
+  {{fa-icon 'home' prefix="fas"}}
+{{/question-link}}
 <div class="divider flex-fill"></div>
 {{#each questions as |question i|}}
   {{#question-link "question" question.id
@@ -6,8 +12,15 @@
     active=(eq question.id currentQuestionId)
     isValid=(if question.isValid true)
   }}
-    {{plus-one i}}
+    {{fa-icon question.icon  prefix="fas"}}
   {{/question-link}}
   <div class="divider flex-fill"></div>
 {{/each}}
-{{#link-to 'send-estimate' class="badge badge-primary badge-icon"}}{{fa-icon 'envelope'}}{{/link-to}}
+
+{{#question-link 'send-estimate'
+  class="badge badge-primary"
+  active=(eq currentRouteName 'send-estimate')
+  isValid=true
+}}
+  {{fa-icon 'envelope'  prefix="fas"}}
+{{/question-link}}
