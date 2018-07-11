@@ -20,8 +20,6 @@ module('Integration | Component | price-meter', function(hooks) {
 
     await render(hbs`{{price-meter model=model}}`);
 
-    assert.equal(this.$('.progress').length, 1);
-    assert.equal(this.$('.progress').text().trim(), "4000€");
-    assert.equal(this.$('.delivery-time span').text().trim(), "3");
+    assert.equal(this.$('.table').length, 1);
   });
 });

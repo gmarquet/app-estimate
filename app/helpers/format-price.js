@@ -12,8 +12,13 @@ export default Helper.extend({
   compute(params){
     let number = params;
     numeral.locale(get(this, 'i18n.locale'));
+    let euroSymbol = "€";
 
-    if (Ember.isArray(params)) {
+    if (params[1]) {
+      euroSymbol = params[1];
+    }
+
+    if (isArray(params)) {
       number = params[0];
     }
 
@@ -25,7 +30,7 @@ export default Helper.extend({
       number = null;
     }
 
-    return numeral(number).format('0,00') + " €";
+    return numeral(number).format('0,00') + " " + euroSymbol;
   },
 
   _recomputeOnLocaleChange: observer('i18n.locale', function() {

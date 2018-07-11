@@ -8,7 +8,7 @@ export default DS.Model.extend({
   description_fr: attr('string'),
   description_en: attr('string'),
   image: attr('string', {defaultValue: "default-answer.png"}),
-  selected: attr('booelan'),
+  selected: attr('booelan', {defaultValue: false}),
   duration: attr('number', {defaultValue: 1}),
   coefficient: attr('number', {defaultValue: 0}),
 

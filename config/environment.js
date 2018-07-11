@@ -23,6 +23,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.i18n = {
+    defaultLocale: 'fr'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

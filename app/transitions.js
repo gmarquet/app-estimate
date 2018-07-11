@@ -11,7 +11,6 @@ export default function(){
     );
     this.transition(
       this.withinRoute('question'),
-      this.debug(),
       this.use('toRight'),
       this.reverse('toLeft')
     );
