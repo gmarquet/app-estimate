@@ -21,8 +21,8 @@
               {{#if a.selected}}
                 <tr class="bg-secondary">
                   <td>{{m-t a  "text"}}</td>
-                  <td class="text-right">{{a.totalDuration}}j</td>
-                  <td class="text-right">{{format-price (calculate-price dailyCost a.totalDuration)}}</td>
+                  <td class="cell-days">{{a.totalDuration}}j</td>
+                  <td class="cell-price">{{format-price (calculate-price dailyCost a.totalDuration)}}</td>
                 </tr>
               {{/if}}
             {{/each}}
@@ -37,19 +37,19 @@
     {{#if discountValue}}
     <tr class="bg-dark">
       <td>Plein tarif</td>
-      <td>{{totalDuration}}j</td>
-      <td class="text-right">{{format-price fullPrice}}</td>
+      <td class="cell-days">{{totalDuration}}j</td>
+      <td class="cell-price">{{format-price fullPrice}}</td>
     </tr>
     <tr class="bg-secondary">
       <td>Reduction</td>
-      <td>-{{show-percent discountPercent}}%</td>
-      <td class="text-right">-{{format-price discountValue}}</td>
+      <td class="cell-days">-{{show-percent discountPercent}}%</td>
+      <td class="cell-price">-{{format-price discountValue}}</td>
     </tr>
     {{/if}}
     <tr class="bg-dark">
       <td>Total</td>
-      <td></td>
-      <td class="text-right">{{format-price totalPrice}}</td>
+      <td class="cell-days"></td>
+      <td class="cell-price">{{format-price totalPrice}}</td>
     </tr>
   </tbody>
 </table>

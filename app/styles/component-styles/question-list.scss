@@ -1,3 +1,4 @@
+
 &{
   text-align: center;
   position: relative;
@@ -8,10 +9,27 @@
     padding: 1rem;
   }
   .divider{
-    // margin: 50% 0;
-    min-width: 15px;
     height: 0;
     border: 1px grey solid;
   }
 
+}
+
+
+@media (max-width: 768px) {
+  &{
+    .badge{
+      font-size: 1rem;
+      padding: 0.6rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  &{
+    .badge{
+      font-size: 0.8rem;
+      padding: 0.4rem;
+    }
+  }
 }

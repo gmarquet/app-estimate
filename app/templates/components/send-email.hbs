@@ -1,11 +1,5 @@
-{{!--
-{{#bs-form model=this onSubmit=(action "sendEmail") as |form|}}
-  {{form.element controlType="email" label="Email" placeholder="Email" property="email" required=true}}
-{{/bs-form}} --}}
-
-
 {{#bs-button class="button-send-email btn-lg" onClick=(action "sendEmail")}}
-  Générer un email avec vos réponses
+  {{fa-icon "envelope"}} Générer un email
 {{/bs-button}}
 
 <div class="d-none">

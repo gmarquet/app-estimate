@@ -1,5 +1,4 @@
 &{
-  min-width: 300px;
   .progress{
     height: 3rem;
     font-size: 1rem;
@@ -12,5 +11,13 @@
 
   .notvisible{
     visibility: hidden;
+  }
+  .cell-price{
+    text-align: right;
+    width: 100px;
+  }
+  .cell-days{
+    text-align: right;
+    width: 60px;
   }
 }

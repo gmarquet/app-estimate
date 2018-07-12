@@ -13,6 +13,7 @@ body>div.ember-view{
 body>div.ember-view{
   flex-direction: column !important;
   display: flex !important;
+  width: 100%;
 }
 
 .navbar{
@@ -97,18 +98,7 @@ h5{
 
 .question{
   text-align: left;
-  .button-prev,
-  .button-next{
-    margin: 1rem;
-  }
-  .button-prev{
-    float: left;
-  }
-  .button-next{
-    float: right;
-  }
+  clear: both;
 }
 
-.answers > div {
-  margin-bottom: 1rem;
-}
+
