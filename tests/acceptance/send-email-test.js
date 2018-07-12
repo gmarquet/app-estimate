@@ -52,7 +52,7 @@ module('Acceptance | send email', function(hooks) {
 
     await click('.button-next');
     assert.equal(currentURL(), '/send-estimate');
-    assert.equal($('#email-content p').length, 10);
+    assert.equal($('#email-content p').length, 9);
 
     await click('.button-send-email');
   });

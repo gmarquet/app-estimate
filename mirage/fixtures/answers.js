@@ -2,27 +2,30 @@ export default [
 // Question 1
   {
     id: 1,
-    text_fr:"1-6 pages",
-    text_en:"1-6 pages",
-    description_fr: "Une petite application comprend entre 1 et 5 pages et 1 ou 2 fonctionnalités",
+    text_fr:"1-2 pages",
+    text_en:"1-2 pages",
+    description_fr: "Une petite application simple",
     description_en: "A small application has between 1 and 5 pages and 1 or 2 features",
     duration: 2,
+    icon: 'square',
   },
   {
     id: 2,
-    text_fr:"7-12 pages",
-    text_en:"7-12 pages",
+    text_fr:"3-10 pages",
+    text_en:"3-10 pages",
     description_fr: "Une application de taille moyenne comprend entre 5 et 15 pages et de 2 à 5 fonctionnalités",
     description_en: "A medium-sized application has between 5 and 15 pages and 2-5 features",
     duration: 4,
+    icon: 'th-large',
   },
   {
     id: 3,
-    text_fr:"13-20 pages",
-    text_en:"13-20 pages",
+    text_fr:"11-20 pages",
+    text_en:"11-20 pages",
     description_fr: "Une application de grande taille comprend plus de 15 pages et plus de 5 fonctionnalités",
     description_en: "A large application includes more than 15 pages and more than 5 features",
     duration: 8,
+    icon: 'th',
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export default [
     description_fr: "Une application de grande taille comprend plus de 15 pages et plus de 5 fonctionnalités",
     description_en: "A large application includes more than 15 pages and more than 5 features",
     duration: 10,
+    icon: 'chess-board',
   },
 // Question 2
   {
@@ -40,6 +44,7 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 1,
+    icon: 'id-card-alt',
   },
   {
     id: 6,
@@ -48,14 +53,16 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'address-card',
   },
   {
     id: 7,
-    text_fr:"Personnalisé",
-    text_en:"Custom",
+    text_fr:"Totalement personnalisé",
+    text_en:"Fully custom",
     description_fr: "",
     description_en: "",
-    duration: 4,
+    duration: 5,
+    icon: 'id-card',
   },
 // Question 3
   {
@@ -66,6 +73,7 @@ export default [
     description_en: "Minimun level of finish to have a functional product",
     duration: 1,
     coefficient: 0,
+    icon: 'warehouse',
   },
   {
     id: 9,
@@ -75,6 +83,7 @@ export default [
     description_en: "Simple and clean design, automated tests that cover the majority of cases and good performance",
     duration: 1,
     coefficient: 0.5,
+    icon: 'building',
   },
   {
     id: 10,
@@ -84,6 +93,7 @@ export default [
     description_en: "Personalized design, automated tests that cover all cases and first-rate performances",
     duration: 1,
     coefficient: 1,
+    icon: 'hotel',
   },
 // Question 4
   {
@@ -93,6 +103,7 @@ export default [
     description_fr: "Inscription et connexion via email et mot de passe",
     description_en: "Sign up and sign in via email and password",
     duration: 0.5,
+    icon: 'envelope',
   },
   {
     id: 12,
@@ -101,6 +112,8 @@ export default [
     description_fr: "Inscription et connexion avec un compte Facebook",
     description_en: "Sign up and sign in with a Facebook account",
     duration: 0.5,
+    icon: 'facebook-square',
+    icon_prefix: 'fab',
   },
   {
     id: 13,
@@ -109,6 +122,8 @@ export default [
     description_fr: "Inscription et connexion avec un compte Twitter",
     description_en: "Sign up and sign in with a Twitter account",
     duration: 0.5,
+    icon: 'twitter-square',
+    icon_prefix: 'fab',
   },
   {
     id: 14,
@@ -117,6 +132,8 @@ export default [
     description_fr: "Inscription et connexion avec un compte Google",
     description_en: "Sign up and sign in with a Google account",
     duration: 0.5,
+    icon: 'google-plus-square',
+    icon_prefix: 'fab',
   },
   {
     id: 15,
@@ -125,6 +142,8 @@ export default [
     description_fr: "Inscription et connexion avec un compte LinkedIn",
     description_en: "Sign up and sign in with a LinkedIn account",
     duration: 0.5,
+    icon: 'linkedin',
+    icon_prefix: 'fab',
   },
   {
     id: 16,
@@ -133,6 +152,8 @@ export default [
     description_fr: "Inscription et connexion avec un compte Github",
     description_en: "Sign up and sign in with a Github account",
     duration: 0.5,
+    icon: 'github-square',
+    icon_prefix: 'fab',
   },
   {
     id: 17,
@@ -141,6 +162,7 @@ export default [
     description_fr: "Envoyer des email d'invitation",
     description_en: "Send invitation emails",
     duration: 1,
+    icon: 'envelope-open',
   },
   {
     id: 18,
@@ -149,6 +171,7 @@ export default [
     description_fr: "Comptes utilisateurs pouvant gérer les droits d'un groupe d'autres utilisateurs",
     description_en: "User accounts that can manage the rights of a group of other users",
     duration: 2,
+    icon: 'users',
   },
 // Question 5
   {
@@ -157,7 +180,8 @@ export default [
     text_en:"Dashboard",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'tachometer-alt',
   },
   {
     id: 20,
@@ -166,22 +190,25 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'rss-square',
   },
   {
     id: 21,
-    text_fr:"Image/Photo des utilisateurs",
+    text_fr:"Image/Photo utilisateur",
     text_en:"User image/picture",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'image',
   },
   {
     id: 22,
-    text_fr:"Audio/musique",
-    text_en:"Audio/music",
+    text_fr:"Audio",
+    text_en:"Audio",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'headphones',
   },
   {
     id: 23,
@@ -190,6 +217,7 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'video',
   },
   {
     id: 24,
@@ -197,7 +225,8 @@ export default [
     text_en:"User Profiles",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'address-card',
   },
   {
     id: 25,
@@ -205,7 +234,8 @@ export default [
     text_en:"Advanced search",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 4,
+    icon: 'search-plus',
   },
   {
     id: 26,
@@ -213,7 +243,8 @@ export default [
     text_en:"Rating system",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'star-half-alt',
   },
 // Question 6
   {
@@ -223,6 +254,7 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'calendar-alt',
   },
   {
     id: 28,
@@ -231,6 +263,7 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'map',
   },
   {
     id: 29,
@@ -238,7 +271,8 @@ export default [
     text_en:"Geolocation",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'map-marked-alt',
   },
   {
     id: 30,
@@ -246,7 +280,8 @@ export default [
     text_en:"Bookings",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 4,
+    icon: 'calendar-check',
   },
 
 // Question 7
@@ -257,6 +292,7 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'comment-alt',
   },
   {
     id: 32,
@@ -264,7 +300,8 @@ export default [
     text_en:"Forums",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'university',
   },
   {
     id: 33,
@@ -272,7 +309,8 @@ export default [
     text_en:"Commenting",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'comments',
   },
   {
     id: 34,
@@ -280,15 +318,17 @@ export default [
     text_en:"Sharing",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'share-square',
   },
   {
     id: 35,
-    text_fr:"Message SMS",
-    text_en:"SMS messaging",
+    text_fr:"SMS",
+    text_en:"SMS",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 4,
+    icon: 'envelope',
   },
   {
     id: 36,
@@ -296,7 +336,8 @@ export default [
     text_en:"Multilingual",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'language',
   },
 // Question 9
   {
@@ -305,15 +346,17 @@ export default [
     text_en:"Subscription",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 4,
+    icon: 'money-check',
   },
   {
     id: 38,
-    text_fr:"Traitement des paiements",
-    text_en:"Payment processing",
+    text_fr:"Paiements",
+    text_en:"Payment",
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'credit-card',
   },
   {
     id: 39,
@@ -321,7 +364,8 @@ export default [
     text_en:"Shopping Cart",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'shopping-cart',
   },
   {
     id: 40,
@@ -329,7 +373,8 @@ export default [
     text_en:"User Marketplace",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 4,
+    icon: 'hand-holding-usd',
   },
   {
     id: 41,
@@ -338,6 +383,7 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'cogs',
   },
 // Question 9
   {
@@ -346,15 +392,17 @@ export default [
     text_en:"User admin",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'users-cog',
   },
   {
     id: 43,
-    text_fr:"Validation/Modération contenu",
-    text_en:"Content approval/moderation",
+    text_fr:"Modération contenu",
+    text_en:"Content moderation",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'thumbs-up',
   },
   {
     id: 44,
@@ -362,16 +410,18 @@ export default [
     text_en:"CMS Intégration",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 1,
+    icon: 'sitemap',
   },
 
   {
     id: 45,
-    text_fr:"Intégration d'une API tierce",
-    text_en:"3rd party API integration",
+    text_fr:"API tierce",
+    text_en:"3rd party API",
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'sign-in-alt',
   },
   {
     id: 46,
@@ -380,6 +430,7 @@ export default [
     description_fr: "",
     description_en: "",
     duration: 2,
+    icon: 'sign-out-alt',
   },
   {
     id: 47,
@@ -387,7 +438,8 @@ export default [
     text_en:"Ticketing system",
     description_fr: "",
     description_en: "",
-    duration: 2,
+    duration: 4,
+    icon: 'ticket-alt',
   },
 
 ];

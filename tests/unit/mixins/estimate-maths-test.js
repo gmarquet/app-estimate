@@ -23,7 +23,7 @@ module('Unit | Mixin | estimate-maths', function() {
       ]
     });
 
-    assert.equal(subject.get('totalPrice'), 1200);
+    assert.equal(subject.get('totalPrice'), 1500);
     assert.equal(subject.get('totalDuration'), 3);
     assert.equal(subject.get('deliveryTime'), 1);
     assert.equal(subject.get('coefficientTotal'), 0.2);
@@ -33,8 +33,9 @@ module('Unit | Mixin | estimate-maths', function() {
     assert.equal(subject.get('totalDuration'), 8);
     assert.equal(subject.get('deliveryTime'), 3);
 
-    subject.get('model').objectAt(2).set('coefficientTotal', 0.3);
-    assert.equal(subject.get('model').objectAt(0).get('answers').objectAt(0).get('coefficientGeneral'), 0.5);
+    subject.get('model').objectAt(2).set('coefficientTotal', 0.8);
+    assert.equal(subject.get('model').objectAt(0).get('answers').objectAt(0).get('coefficientGeneral'), 1);
+    assert.equal(subject.get('fullPrice'), 500*8);
   });
 
   test('Discount calculations', function (assert) {
@@ -50,16 +51,16 @@ module('Unit | Mixin | estimate-maths', function() {
     assert.equal(subject.get('totalDuration'), 3);
     assert.equal(subject.get('discountPercent'), 0);
     assert.equal(subject.get('discountValue'), 0);
-    assert.equal(subject.get('totalPrice'), 1200);
+    assert.equal(subject.get('totalPrice'), 1500);
 
     subject.get('model').objectAt(2).set('totalDuration', 3);
     assert.equal(subject.get('discountPercent'), 0.1);
-    assert.equal(subject.get('discountValue'), 200);
-    assert.equal(subject.get('totalPrice'), 1800);
+    assert.equal(subject.get('discountValue'), 250);
+    assert.equal(subject.get('totalPrice'), 2250);
 
     subject.get('model').objectAt(2).set('totalDuration', 14);
     assert.equal(subject.get('discountPercent'), 0.3);
-    assert.equal(subject.get('discountValue'), 1920);
-    assert.equal(subject.get('totalPrice'), 4480);
+    assert.equal(subject.get('discountValue'), 2400);
+    assert.equal(subject.get('totalPrice'), 5600);
   });
 });

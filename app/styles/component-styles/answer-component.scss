@@ -3,26 +3,22 @@
   position:relative;
   border-width: 1px;
   text-align: center;
-  // border: none;
   border-radius: 0;
   &:hover{
     background: #f8f9fa;
   }
   &.selected{
-    background:#28a745;
+    background:theme-color(success);
   }
   .info{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    border-radius: 50%;
     cursor: help;
-    height: 2rem;
-    width: 2rem;
-    font-size: 1.2rem;
+    font-size: inherit;
+    position: absolute;
+    top: 2px;
+    right: 2px;
   }
-  svg.svg-inline--fa{
-    font-size: 5rem;
+  svg.svg-inline--fa.answer-icon{
+    font-size: 8rem;
     padding: 1rem;
     width: 100%;
   }

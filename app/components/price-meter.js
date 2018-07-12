@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import EstimateMathsMixin from '../mixins/estimate-maths';
 
 export default Component.extend(EstimateMathsMixin, {
-  showDetails: true,
+  showDetails: false,
 
   actions: {
     toggleDetails(){

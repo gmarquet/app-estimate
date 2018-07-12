@@ -4,8 +4,8 @@
 {{/bs-form}} --}}
 
 
-{{#bs-button class="button-send-email" onClick=(action "sendEmail")}}
-  Envoyer un email
+{{#bs-button class="button-send-email btn-lg" onClick=(action "sendEmail")}}
+  Générer un email avec vos réponses
 {{/bs-button}}
 
 <div class="d-none">
@@ -19,10 +19,10 @@
 {{#each model as |q|}}
 {{#if q.hasOneAnswer}}
 <p>
-{{m-t q  "title"}}<br>
+{{m-t q  "title"}}
 {{#each q.answers as |a|}}
 {{#if a.selected}}
-  {{m-t a  "text"}}<br>
+  {{m-t a  "text"}}
 {{/if}}
 {{/each}}
 </p>

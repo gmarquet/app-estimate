@@ -6,9 +6,9 @@
     {{fa-icon "chevron-right" prefix="fas"}}
   {{/bs-button}}
   {{#liquid-bind model use="question" as |currentModel|}}
-    <h3 class="question-title">
-      {{m-t currentModel  "title"}}
-    </h3>
+    <h2 class="question-title">
+      {{m-t currentModel "title"}}
+    </h2>
     <p>{{m-t currentModel  "description"}}</p>
 
     <div class="answers d-flex flex-wrap align-content-around">

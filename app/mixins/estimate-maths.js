@@ -3,7 +3,7 @@ import { get, computed, observer } from '@ember/object';
 import { on } from '@ember/object/evented';
 
 export default Mixin.create({
-  dailyCost: 400,
+  dailyCost: 500,
 
   discountPercent: computed('totalDuration', function(){
     let { totalDuration } = this;

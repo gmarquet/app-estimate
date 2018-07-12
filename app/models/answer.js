@@ -10,6 +10,7 @@ export default DS.Model.extend({
   description_fr: attr('string'),
   description_en: attr('string'),
   icon: attr('string', {defaultValue: "lightbulb"}),
+  icon_prefix: attr('string', {defaultValue: "fas"}),
   selected: attr('booelan', {defaultValue: false}),
   duration: attr('number', {defaultValue: 1}),
   coefficient: attr('number', {defaultValue: 0}),

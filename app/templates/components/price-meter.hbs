@@ -1,6 +1,6 @@
-<h4>Estimation :</h4>
-<div class="text-right">
-  {{#bs-button class="btn-sm"onClick=(action "toggleDetails")}}
+<h3>Estimation :</h3>
+<div class="text-right {{if totalPrice "" "notvisible"}}">
+  {{#bs-button class="btn-sm" onClick=(action "toggleDetails")}}
     {{#if showDetails}}
       Cacher les détails
     {{else}}
@@ -14,12 +14,12 @@
     <tbody>
         {{#each model as |q|}}
           {{#if q.hasOneAnswer}}
-            <tr>
+            <tr class="bg-dark">
               <td colspan="3">{{m-t q  "title"}}</td>
             </tr>
             {{#each q.answers as |a|}}
               {{#if a.selected}}
-                <tr class="table-secondary">
+                <tr class="bg-secondary">
                   <td>{{m-t a  "text"}}</td>
                   <td class="text-right">{{a.totalDuration}}j</td>
                   <td class="text-right">{{format-price (calculate-price dailyCost a.totalDuration)}}</td>
@@ -35,13 +35,20 @@
 <table class="table table-dark table-sm">
   <tbody>
     {{#if discountValue}}
-    <tr class="table-secondary">
-      <td>Reduction {{discountPercent}}%</td>
+    <tr class="bg-dark">
+      <td>Plein tarif</td>
+      <td>{{totalDuration}}j</td>
+      <td class="text-right">{{format-price fullPrice}}</td>
+    </tr>
+    <tr class="bg-secondary">
+      <td>Reduction</td>
+      <td>-{{show-percent discountPercent}}%</td>
       <td class="text-right">-{{format-price discountValue}}</td>
     </tr>
     {{/if}}
-    <tr>
+    <tr class="bg-dark">
       <td>Total</td>
+      <td></td>
       <td class="text-right">{{format-price totalPrice}}</td>
     </tr>
   </tbody>

@@ -2,15 +2,15 @@ export default [
   { id: 1,
     title_fr: 'De quelle taille est votre application ?',
     title_en: 'How big is your app?',
-    description_fr: 'Cette application d\'estimation est une application de petite taille (1-5 pages et 1-2 fonctionnalités).',
+    description_fr: "Une page ou vue est une interface distincte présentée à l'utilisateur. Le nombre de page est un bon indicateur de la compléxité de l'application et influe sur le temps passé sur la structuration des urls.",
     description_en: 'This estimate app is a small-sized app (1-5 pages and 1-2 features).',
     icon: "file",
     answerIds: [1,2,3,4]
   },
   { id: 2,
-    title_fr: 'Quel serait votre thème de l\'interface utilisateur?',
+    title_fr: "Quel type de design pour l'interface utilisateur souhaitez-vous?",
     title_en: 'What would your UI theme be?',
-    description_fr: 'Le niveau de finition comprend le niveau de détails du design, tests automatisés et performances.',
+    description_fr: "Le type de design est la base sur laquelle se fonde tout le travail de mise en page. Il influe sur le temps passé sur l'intégration",
     description_en: 'The level of finish contains the level of detail in design, automated testing and performances.',
     icon: "palette",
     answerIds: [5,6,7]
@@ -18,7 +18,7 @@ export default [
   { id: 3,
     title_fr: 'Quel niveau de finition souhaitez-vous ?',
     title_en: 'What level of finish do you want?',
-    description_fr: 'Le niveau de finition comprend le niveau de détails du design, tests automatisés et performances.',
+    description_fr: "Le niveau de finition comprend le niveau de détails du design, tests automatisés et performances. Il influe sur le temps passé sur toutes les parties de l'application",
     description_en: 'The level of finish contains the level of detail in design, automated testing and performances.',
     icon: "paint-roller",
     answerIds: [8,9,10]

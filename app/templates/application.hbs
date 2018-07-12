@@ -5,7 +5,7 @@
   </div>
 </nav>
 
-<div class="container d-flex flex-column flex-fill">
+<div id="app-container" class="container d-flex flex-column flex-fill">
   <div class="row d-flex flex-grow question-container flex-fill">
     <div class="col-8">
       {{question-list
@@ -22,11 +22,11 @@
 </div>
 
 <footer class="footer">
-  <div class="author">
+  <div class="about">
     <div class="container">
       <div class="row">
         <div class="col">
-          <h5>A propos de l'auteur</h5>
+          <h5>A propos</h5>
           <div class="card p-2 d-flex flex-column">
             <div class="d-flex">
               <img class="rounded-circle author-image" src="/assets/images/gaetan.png">
@@ -62,30 +62,25 @@
           </div>
         </div>
         <div class="col">
-          <h5>Technologies utilisées</h5>
-          <div class="card p-2  text-center">
-            <div class="techs d-flex justify-content-between">
-              <div class="tech">
-                <img src="/assets/images/techs/ember-js-logo.png">
-                <span>Ember JS</span>
-              </div>
-              <div class="tech">
-                <img src="/assets/images/techs/boostrap-logo.png">
-                <span>Bootstrap</span>
-              </div>
-              <div class="tech">
-                <img src="/assets/images/techs/font-awesome-logo.png">
-                <span>Fontawesome</span>
-              </div>
-            </div>
+          <h5>Code</h5>
+          <div class="card p-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="copyright py-4 text-center text-white">
+  <div class="copyright py-4 text-center">
     <div class="container">
-      Code source disponible ici : <a target="_blank" href="https://github.com/gmarquet/estimate-my-app" class="btn btn-secondary">{{fa-icon "github" prefix="fab"}}</a>
+      <p>
+        <em>Code source disponible ici : <a target="_blank" href="https://github.com/gmarquet/estimate-my-app" class="btn btn-secondary btn-sm">{{fa-icon "github" prefix="fab"}}</a></em><br>
+        Copyright © 2018 - Gaëtan MARQUET. Licence MIT.
+      </p>
     </div>
   </div>
 </footer>
