@@ -9,17 +9,16 @@ module('Integration | Helper | calculate-price', function(hooks) {
   // Replace this with your real tests.
   test('it renders', async function(assert) {
     this.set('dailyCost', 100);
-    this.set('coefficientTotal', 0.5);
     this.set('duration', 3);
 
-    await render(hbs`{{calculate-price dailyCost coefficientTotal duration}}`);
+    await render(hbs`{{calculate-price dailyCost duration}}`);
 
-    assert.equal(this.element.textContent.trim(), 3*100*1.5);
+    assert.equal(this.element.textContent.trim(), 3*100);
 
-    this.set('duration', "");
+    this.set('duration', "dsqd");
     assert.equal(this.element.textContent.trim(), 0);
 
     this.set('duration', 3.000001);
-    assert.equal(this.element.textContent.trim(), 3*100*1.5);
+    assert.equal(this.element.textContent.trim(), 3*100);
   });
 });

@@ -58,9 +58,10 @@ module('Unit | Model | question', function(hooks) {
   });
 
 
-  test('totalDuration and coefficientTotal computed properties calculation', function(assert) {
+  test('coefficientTotal, totalDuration computed properties calculation', function(assert) {
     let store = this.owner.lookup('service:store');
     let model = run(() => store.createRecord('question', {
+      coefficientGeneral: 0,
       answers: [
         store.createRecord('answer', {duration: 1, coefficient: 0.1, selected:false}),
         store.createRecord('answer', {duration: 2, coefficient: 0.2, selected:false}),
@@ -77,6 +78,7 @@ module('Unit | Model | question', function(hooks) {
 
     assert.equal(model.get('totalDuration'), 5);
     assert.equal(model.get('coefficientTotal'), 0.5);
+
   });
 
 

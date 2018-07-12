@@ -34,6 +34,7 @@ module('Acceptance | question', function(hooks) {
     await visit('/1');
 
     await click('.answer:first-of-type');
+    await click('.button-next');
     assert.equal(currentURL(), '/2');
     assert.ok($('.question-list a:eq(1)').hasClass("badge-success"));
     assert.ok(!$('.question-list a:eq(2)').hasClass("badge-success"));

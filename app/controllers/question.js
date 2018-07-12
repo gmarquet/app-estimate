@@ -8,9 +8,9 @@ export default Controller.extend({
   actions:{
     select(a){
       get(this, "model").selectAnswer(a);
-      if(!get(this, 'model.multiple') && get(a, 'selected')){
-        this.send('transitionToNextQuestion');
-      }
+      // if(!get(this, 'model.multiple') && get(a, 'selected')){
+      //   this.send('transitionToNextQuestion');
+      // }
     },
     next(){
       let model = get(this, 'model');

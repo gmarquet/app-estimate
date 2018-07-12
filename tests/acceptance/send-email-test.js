@@ -13,44 +13,47 @@ module('Acceptance | send email', function(hooks) {
 
     await click('.start-questions');
 
-    await click(('.answers :nth-child(2)'));
+    await click('.answers :nth-child(2)');
+    await click('.button-next');
     assert.equal(currentURL(), '/2');
 
-    await click(('.answers :nth-child(3)'));
+    await click('.answers :nth-child(3)');
+    await click('.button-next');
     assert.equal(currentURL(), '/3');
 
-    await click(('.answers :nth-child(2)'));
+    await click('.answers :nth-child(2)');
+    await click('.button-next');
     assert.equal(currentURL(), '/4');
 
-    await click(('.answers :nth-child(1)'));
-    await click(('.answers :nth-child(2)'));
-    await click(('.answers :nth-child(4)'));
-    await click(('.button-next'));
+    await click('.answers :nth-child(1)');
+    await click('.answers :nth-child(2)');
+    await click('.answers :nth-child(4)');
+    await click('.button-next');
     assert.equal(currentURL(), '/5');
 
-    await click(('.answers :nth-child(1)'));
-    await click(('.answers :nth-child(2)'));
-    await click(('.answers :nth-child(4)'));
-    await click(('.answers :nth-child(5)'));
-    await click(('.answers :nth-child(6)'));
-    await click(('.button-next'));
+    await click('.answers :nth-child(1)');
+    await click('.answers :nth-child(2)');
+    await click('.answers :nth-child(4)');
+    await click('.answers :nth-child(5)');
+    await click('.answers :nth-child(6)');
+    await click('.button-next');
     assert.equal(currentURL(), '/6');
 
-    await click(('.answers :nth-child(3)'));
-    await click(('.answers :nth-child(2)'));
-    await click(('.button-next'));
+    await click('.answers :nth-child(3)');
+    await click('.answers :nth-child(2)');
+    await click('.button-next');
     assert.equal(currentURL(), '/7');
 
-    await click(('.button-next'));
+    await click('.button-next');
     assert.equal(currentURL(), '/8');
 
-    await click(('.button-next'));
+    await click('.button-next');
     assert.equal(currentURL(), '/9');
 
-    await click(('.button-next'));
+    await click('.button-next');
     assert.equal(currentURL(), '/send-estimate');
     assert.equal($('#email-content p').length, 10);
 
-    await click(('.button-send-email'));
+    await click('.button-send-email');
   });
 });

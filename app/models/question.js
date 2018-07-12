@@ -15,7 +15,6 @@ export default DS.Model.extend({
 
   answers: hasMany('answer'),
 
-
   totalDuration: computed('answers.@each.selected', function(){
     return get(this, "answers").reduce(function(acc, a){
       if(get(a, "selected")) return get(a, "duration") + acc;
