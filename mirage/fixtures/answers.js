@@ -157,7 +157,7 @@ export default [
   },
   {
     id: 17,
-    text_fr:"Emails d'invitation d'utilisateur",
+    text_fr:"Emails d'invitation",
     text_en:"User Invitation Emails",
     description_fr: "Envoyer des email d'invitation",
     description_en: "Send invitation emails",

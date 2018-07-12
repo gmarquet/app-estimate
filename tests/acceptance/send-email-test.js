@@ -54,6 +54,6 @@ module('Acceptance | send email', function(hooks) {
     assert.equal(currentURL(), '/send-estimate');
     assert.equal($('#email-content p').length, 9);
 
-    await click('.button-send-email');
+    // await click('.button-send-email');
   });
 });
