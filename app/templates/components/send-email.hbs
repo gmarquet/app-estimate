@@ -1,12 +1,12 @@
 {{#bs-button class="button-send-email btn-lg" onClick=(action "sendEmail")}}
-  {{fa-icon "envelope"}} Générer un email
+  {{fa-icon "envelope"}} {{t "send-email.button"}}
 {{/bs-button}}
 
 <div class="d-none">
-<div id="email-subject">Demande de prise de contacte suite à estimation.({{format-price totalPrice "euro"}})</div>
+<div id="email-subject">{{t "email.subject"}} ({{format-price totalPrice "euro"}})</div>
 
 <div id="email-content">
-<p>Voici les réponses au questionnaire.</p>
+<p>{{t "email.body.text"}}</p>
 <p>-----------------------------------</p>
 <p>Total : {{format-price totalPrice "euro"}}</p>
 <p>-----------------------------------</p>

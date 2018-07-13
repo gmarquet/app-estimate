@@ -1,10 +1,10 @@
-<h3>Estimation :</h3>
+<h3>{{t "price-meter.title"}} :</h3>
 <div class="text-right {{if totalPrice "" "notvisible"}}">
   {{#bs-button class="btn-sm" onClick=(action "toggleDetails")}}
     {{#if showDetails}}
-      Cacher les détails
+      {{t "price-meter.hide-details"}}
     {{else}}
-      Afficher les détails
+      {{t "price-meter.show-details"}}
     {{/if}}
   {{/bs-button}}
 </div>
@@ -21,7 +21,7 @@
               {{#if a.selected}}
                 <tr class="bg-secondary">
                   <td>{{m-t a  "text"}}</td>
-                  <td class="cell-days">{{a.totalDuration}}j</td>
+                  <td class="cell-days">{{a.totalDuration}}{{t "price-meter.day-letter"}}</td>
                   <td class="cell-price">{{format-price (calculate-price dailyCost a.totalDuration)}}</td>
                 </tr>
               {{/if}}
@@ -36,12 +36,12 @@
   <tbody>
     {{#if discountValue}}
     <tr class="bg-dark">
-      <td>Plein tarif</td>
-      <td class="cell-days">{{totalDuration}}j</td>
+      <td>{{t "price-meter.full-price"}}</td>
+      <td class="cell-days">{{totalDuration}}{{t "price-meter.day-letter"}}</td>
       <td class="cell-price">{{format-price fullPrice}}</td>
     </tr>
     <tr class="bg-secondary">
-      <td>Reduction</td>
+      <td>{{t "price-meter.reduction"}}</td>
       <td class="cell-days">-{{show-percent discountPercent}}%</td>
       <td class="cell-price">-{{format-price discountValue}}</td>
     </tr>
@@ -56,6 +56,6 @@
 
 <div class="delivery-time">
   {{#if deliveryTime}}
-    Durée de réalisation : <span>{{deliveryTime}}</span> semaine{{if (gt deliveryTime 1) 's'}}
+    {{t "price-meter.delivery-time"}} : <span>{{deliveryTime}}</span> {{t "price-meter.week"}}{{if (gt deliveryTime 1) 's'}}
   {{/if}}
 </div>
