@@ -1,8 +1,8 @@
 {
-  "name": "estimate-my-app",
-  "version": "0.0.1",
+  "name": "app-estimate",
+  "version": "0.1.0",
   "private": true,
-  "description": "Small description for estimate-my-app goes here",
+  "description": "Tool to estimate price & duration of web app making",
   "license": "MIT",
   "author": "",
   "directories": {

@@ -12,6 +12,8 @@ module.exports = function(defaults) {
         'bs-tooltip',
         'bs-button',
         'bs-dropdown',
+        'bs-form',
+        'bs-alert',
         'bs-popover',
         'bs-collapse'
       ],

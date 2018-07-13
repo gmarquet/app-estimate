@@ -5,13 +5,13 @@ import { computed } from '@ember/object';
 const { attr, belongsTo } = DS;
 
 export default DS.Model.extend({
-  text_fr: attr('string'),
-  text_en: attr('string'),
+  title_fr: attr('string'),
+  title_en: attr('string'),
   description_fr: attr('string'),
   description_en: attr('string'),
   icon: attr('string', {defaultValue: "lightbulb"}),
   icon_prefix: attr('string', {defaultValue: "fas"}),
-  selected: attr('booelan', {defaultValue: false}),
+  selected: attr('boolean', {defaultValue: false}),
   duration: attr('number', {defaultValue: 1}),
   coefficient: attr('number', {defaultValue: 0}),
 

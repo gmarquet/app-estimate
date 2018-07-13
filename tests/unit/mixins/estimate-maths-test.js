@@ -1,5 +1,5 @@
 import EmberObject from '@ember/object';
-import EstimateMathsMixin from 'estimate-my-app/mixins/estimate-maths';
+import EstimateMathsMixin from 'app-estimate/mixins/estimate-maths';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | estimate-maths', function() {

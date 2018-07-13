@@ -2,8 +2,8 @@ export default [
 // Question 1
   {
     id: 1,
-    text_fr:"1-2 pages",
-    text_en:"1-2 pages",
+    title_fr:"1-2 pages",
+    title_en:"1-2 pages",
     description_fr: "Une petite application simple",
     description_en: "A small application has between 1 and 5 pages and 1 or 2 features",
     duration: 2,
@@ -11,8 +11,8 @@ export default [
   },
   {
     id: 2,
-    text_fr:"3-10 pages",
-    text_en:"3-10 pages",
+    title_fr:"3-10 pages",
+    title_en:"3-10 pages",
     description_fr: "Une application de taille moyenne comprend entre 5 et 15 pages et de 2 à 5 fonctionnalités",
     description_en: "A medium-sized application has between 5 and 15 pages and 2-5 features",
     duration: 4,
@@ -20,8 +20,8 @@ export default [
   },
   {
     id: 3,
-    text_fr:"11-20 pages",
-    text_en:"11-20 pages",
+    title_fr:"11-20 pages",
+    title_en:"11-20 pages",
     description_fr: "Une application de grande taille comprend plus de 15 pages et plus de 5 fonctionnalités",
     description_en: "A large application includes more than 15 pages and more than 5 features",
     duration: 8,
@@ -29,8 +29,8 @@ export default [
   },
   {
     id: 4,
-    text_fr:"21+ pages",
-    text_en:"21+  pages",
+    title_fr:"21+ pages",
+    title_en:"21+  pages",
     description_fr: "Une application de grande taille comprend plus de 15 pages et plus de 5 fonctionnalités",
     description_en: "A large application includes more than 15 pages and more than 5 features",
     duration: 10,
@@ -39,8 +39,8 @@ export default [
 // Question 2
   {
     id: 5,
-    text_fr:"Basique",
-    text_en:"Basic",
+    title_fr:"Basique",
+    title_en:"Basic",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -48,8 +48,8 @@ export default [
   },
   {
     id: 6,
-    text_fr:"Intégration template",
-    text_en:"Template integration",
+    title_fr:"Intégration template",
+    title_en:"Template integration",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -57,8 +57,8 @@ export default [
   },
   {
     id: 7,
-    text_fr:"Totalement personnalisé",
-    text_en:"Fully custom",
+    title_fr:"Totalement personnalisé",
+    title_en:"Fully custom",
     description_fr: "",
     description_en: "",
     duration: 5,
@@ -67,8 +67,8 @@ export default [
 // Question 3
   {
     id: 8,
-    text_fr:"MVP",
-    text_en:"MVP",
+    title_fr:"MVP",
+    title_en:"MVP",
     description_fr: "Niveau de finition minimun pour avoir un produit fonctionnel",
     description_en: "Minimun level of finish to have a functional product",
     duration: 1,
@@ -77,8 +77,8 @@ export default [
   },
   {
     id: 9,
-    text_fr:"Classique",
-    text_en:"Classic",
+    title_fr:"Classique",
+    title_en:"Classic",
     description_fr: "Design simple et propre, tests automatisés qui couvrent la majorité des cas et bonne performance",
     description_en: "Simple and clean design, automated tests that cover the majority of cases and good performance",
     duration: 1,
@@ -87,8 +87,8 @@ export default [
   },
   {
     id: 10,
-    text_fr:"Parfait",
-    text_en:"Flawless",
+    title_fr:"Parfait",
+    title_en:"Flawless",
     description_fr: "Design personnalisé, tests automatisés qui couvrent tous les cas et performance de premier ordre",
     description_en: "Personalized design, automated tests that cover all cases and first-rate performances",
     duration: 1,
@@ -98,8 +98,8 @@ export default [
 // Question 4
   {
     id: 11,
-    text_fr:"Email/Mot de passe",
-    text_en:"Email/Password",
+    title_fr:"Email/Mot de passe",
+    title_en:"Email/Password",
     description_fr: "Inscription et connexion via email et mot de passe",
     description_en: "Sign up and sign in via email and password",
     duration: 0.5,
@@ -107,8 +107,8 @@ export default [
   },
   {
     id: 12,
-    text_fr:"Facebook",
-    text_en:"Facebook",
+    title_fr:"Facebook",
+    title_en:"Facebook",
     description_fr: "Inscription et connexion avec un compte Facebook",
     description_en: "Sign up and sign in with a Facebook account",
     duration: 0.5,
@@ -117,8 +117,8 @@ export default [
   },
   {
     id: 13,
-    text_fr:"Twitter",
-    text_en:"Twitter",
+    title_fr:"Twitter",
+    title_en:"Twitter",
     description_fr: "Inscription et connexion avec un compte Twitter",
     description_en: "Sign up and sign in with a Twitter account",
     duration: 0.5,
@@ -127,8 +127,8 @@ export default [
   },
   {
     id: 14,
-    text_fr:"Google",
-    text_en:"Google",
+    title_fr:"Google",
+    title_en:"Google",
     description_fr: "Inscription et connexion avec un compte Google",
     description_en: "Sign up and sign in with a Google account",
     duration: 0.5,
@@ -137,8 +137,8 @@ export default [
   },
   {
     id: 15,
-    text_fr:"LinkedIn",
-    text_en:"LinkedIn",
+    title_fr:"LinkedIn",
+    title_en:"LinkedIn",
     description_fr: "Inscription et connexion avec un compte LinkedIn",
     description_en: "Sign up and sign in with a LinkedIn account",
     duration: 0.5,
@@ -147,8 +147,8 @@ export default [
   },
   {
     id: 16,
-    text_fr:"Github",
-    text_en:"Github",
+    title_fr:"Github",
+    title_en:"Github",
     description_fr: "Inscription et connexion avec un compte Github",
     description_en: "Sign up and sign in with a Github account",
     duration: 0.5,
@@ -157,8 +157,8 @@ export default [
   },
   {
     id: 17,
-    text_fr:"Emails d'invitation",
-    text_en:"User Invitation Emails",
+    title_fr:"Emails d'invitation",
+    title_en:"User Invitation Emails",
     description_fr: "Envoyer des email d'invitation",
     description_en: "Send invitation emails",
     duration: 1,
@@ -166,8 +166,8 @@ export default [
   },
   {
     id: 18,
-    text_fr:"Comptes multi-tenants",
-    text_en:"Multi-tenant accounts",
+    title_fr:"Comptes multi-tenants",
+    title_en:"Multi-tenant accounts",
     description_fr: "Comptes utilisateurs pouvant gérer les droits d'un groupe d'autres utilisateurs",
     description_en: "User accounts that can manage the rights of a group of other users",
     duration: 2,
@@ -176,8 +176,8 @@ export default [
 // Question 5
   {
     id: 19,
-    text_fr:"Tableau de bord",
-    text_en:"Dashboard",
+    title_fr:"Tableau de bord",
+    title_en:"Dashboard",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -185,8 +185,8 @@ export default [
   },
   {
     id: 20,
-    text_fr:"Fil d'actualité",
-    text_en:"Activity Feed",
+    title_fr:"Fil d'actualité",
+    title_en:"Activity Feed",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -194,8 +194,8 @@ export default [
   },
   {
     id: 21,
-    text_fr:"Image/Photo utilisateur",
-    text_en:"User image/picture",
+    title_fr:"Image/Photo utilisateur",
+    title_en:"User image/picture",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -203,8 +203,8 @@ export default [
   },
   {
     id: 22,
-    text_fr:"Audio",
-    text_en:"Audio",
+    title_fr:"Audio",
+    title_en:"Audio",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -212,8 +212,8 @@ export default [
   },
   {
     id: 23,
-    text_fr:"Vidéo",
-    text_en:"Video",
+    title_fr:"Vidéo",
+    title_en:"Video",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -221,8 +221,8 @@ export default [
   },
   {
     id: 24,
-    text_fr:"Profils utilisateurs",
-    text_en:"User Profiles",
+    title_fr:"Profils utilisateurs",
+    title_en:"User Profiles",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -230,8 +230,8 @@ export default [
   },
   {
     id: 25,
-    text_fr:"Recherche avancée",
-    text_en:"Advanced search",
+    title_fr:"Recherche avancée",
+    title_en:"Advanced search",
     description_fr: "",
     description_en: "",
     duration: 4,
@@ -239,8 +239,8 @@ export default [
   },
   {
     id: 26,
-    text_fr:"Système de notation",
-    text_en:"Rating system",
+    title_fr:"Système de notation",
+    title_en:"Rating system",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -249,8 +249,8 @@ export default [
 // Question 6
   {
     id: 27,
-    text_fr:"Calendrier",
-    text_en:"Calendar",
+    title_fr:"Calendrier",
+    title_en:"Calendar",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -258,8 +258,8 @@ export default [
   },
   {
     id: 28,
-    text_fr:"Carte",
-    text_en:"Map",
+    title_fr:"Carte",
+    title_en:"Map",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -267,8 +267,8 @@ export default [
   },
   {
     id: 29,
-    text_fr:"Géolocation",
-    text_en:"Geolocation",
+    title_fr:"Géolocation",
+    title_en:"Geolocation",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -276,8 +276,8 @@ export default [
   },
   {
     id: 30,
-    text_fr:"Reservation",
-    text_en:"Bookings",
+    title_fr:"Reservation",
+    title_en:"Bookings",
     description_fr: "",
     description_en: "",
     duration: 4,
@@ -287,8 +287,8 @@ export default [
 // Question 7
   {
     id: 31,
-    text_fr:"Messagerie",
-    text_en:"Messaging",
+    title_fr:"Messagerie",
+    title_en:"Messaging",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -296,8 +296,8 @@ export default [
   },
   {
     id: 32,
-    text_fr:"Forums",
-    text_en:"Forums",
+    title_fr:"Forums",
+    title_en:"Forums",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -305,8 +305,8 @@ export default [
   },
   {
     id: 33,
-    text_fr:"Commentaires",
-    text_en:"Commenting",
+    title_fr:"Commentaires",
+    title_en:"Commenting",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -314,8 +314,8 @@ export default [
   },
   {
     id: 34,
-    text_fr:"Partage",
-    text_en:"Sharing",
+    title_fr:"Partage",
+    title_en:"Sharing",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -323,8 +323,8 @@ export default [
   },
   {
     id: 35,
-    text_fr:"SMS",
-    text_en:"SMS",
+    title_fr:"SMS",
+    title_en:"SMS",
     description_fr: "",
     description_en: "",
     duration: 4,
@@ -332,18 +332,18 @@ export default [
   },
   {
     id: 36,
-    text_fr:"Multilingue",
-    text_en:"Multilingual",
+    title_fr:"Multilingue",
+    title_en:"Multilingual",
     description_fr: "",
     description_en: "",
     duration: 1,
     icon: 'language',
   },
-// Question 9
+// Question 8
   {
     id: 37,
-    text_fr:"Abonnements",
-    text_en:"Subscription",
+    title_fr:"Abonnements",
+    title_en:"Subscription",
     description_fr: "",
     description_en: "",
     duration: 4,
@@ -351,8 +351,8 @@ export default [
   },
   {
     id: 38,
-    text_fr:"Paiements",
-    text_en:"Payment",
+    title_fr:"Paiements",
+    title_en:"Payment",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -360,8 +360,8 @@ export default [
   },
   {
     id: 39,
-    text_fr:"Panier",
-    text_en:"Shopping Cart",
+    title_fr:"Panier",
+    title_en:"Shopping Cart",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -369,8 +369,8 @@ export default [
   },
   {
     id: 40,
-    text_fr:"Place de marché utilisateur",
-    text_en:"User Marketplace",
+    title_fr:"Place de marché utilisateur",
+    title_en:"User Marketplace",
     description_fr: "",
     description_en: "",
     duration: 4,
@@ -378,8 +378,8 @@ export default [
   },
   {
     id: 41,
-    text_fr:"Gestion des produits",
-    text_en:"Product Management",
+    title_fr:"Gestion des produits",
+    title_en:"Product Management",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -388,8 +388,8 @@ export default [
 // Question 9
   {
     id: 42,
-    text_fr:"Administration utilisateurs",
-    text_en:"User admin",
+    title_fr:"Administration utilisateurs",
+    title_en:"User admin",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -397,8 +397,8 @@ export default [
   },
   {
     id: 43,
-    text_fr:"Modération contenu",
-    text_en:"Content moderation",
+    title_fr:"Modération contenu",
+    title_en:"Content moderation",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -406,8 +406,8 @@ export default [
   },
   {
     id: 44,
-    text_fr:"Intégration CMS",
-    text_en:"CMS Intégration",
+    title_fr:"Intégration CMS",
+    title_en:"CMS Intégration",
     description_fr: "",
     description_en: "",
     duration: 1,
@@ -416,8 +416,8 @@ export default [
 
   {
     id: 45,
-    text_fr:"API tierce",
-    text_en:"3rd party API",
+    title_fr:"API tierce",
+    title_en:"3rd party API",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -425,8 +425,8 @@ export default [
   },
   {
     id: 46,
-    text_fr:"API externe",
-    text_en:"External API",
+    title_fr:"API externe",
+    title_en:"External API",
     description_fr: "",
     description_en: "",
     duration: 2,
@@ -434,8 +434,8 @@ export default [
   },
   {
     id: 47,
-    text_fr:"Système de ticket",
-    text_en:"Ticketing system",
+    title_fr:"Système de ticket",
+    title_en:"Ticketing system",
     description_fr: "",
     description_en: "",
     duration: 4,

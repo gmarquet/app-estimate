@@ -1,5 +1,5 @@
 <h3>{{t "price-meter.title"}} :</h3>
-<div class="text-right {{if totalPrice "" "notvisible"}}">
+<div class="text-right toggle-details {{if totalPrice "" "notvisible"}}">
   {{#bs-button class="btn-sm" onClick=(action "toggleDetails")}}
     {{#if showDetails}}
       {{t "price-meter.hide-details"}}
@@ -20,7 +20,7 @@
             {{#each q.answers as |a|}}
               {{#if a.selected}}
                 <tr class="bg-secondary">
-                  <td>{{m-t a  "text"}}</td>
+                  <td>{{m-t a  "title"}}</td>
                   <td class="cell-days">{{a.totalDuration}}{{t "price-meter.day-letter"}}</td>
                   <td class="cell-price">{{format-price (calculate-price dailyCost a.totalDuration)}}</td>
                 </tr>

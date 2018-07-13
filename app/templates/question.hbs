@@ -13,10 +13,10 @@
       {{/each}}
     </div>
 
-    <div class="text-center mt-5">
-      {{#bs-button class="button-next" type="primary" click=(action "next") disabled=(and (not currentModel.isValid) (not currentModel.passable))}}
-        {{t "question.next-button"}}
-      {{/bs-button}}
-    </div>
   {{/liquid-bind}}
+  <div class="text-center mt-5">
+    {{#bs-button class="button-next" type="primary" click=(action "next") disabled=(and (not model.isValid) (not model.passable))}}
+      {{t "question.next-button"}}
+    {{/bs-button}}
+  </div>
 </div>

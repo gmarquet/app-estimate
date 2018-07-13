@@ -12,7 +12,7 @@ export default Mixin.create({
       {days: 5, percent: 0.1},
       {days: 10, percent: 0.2},
       {days: 15, percent: 0.3},
-    ]
+    ];
     let a = discountTab.sortBy('days').reduce(function(previousValue, item){
       if(totalDuration >= get(item, "days")) return item;
       return previousValue;

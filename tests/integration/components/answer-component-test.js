@@ -2,7 +2,6 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import $ from 'jquery';
 import Service from '@ember/service';
 
 
@@ -24,15 +23,18 @@ module('Integration | Component | answer-component', function(hooks) {
 
   test('it renders', async function(assert) {
     this.set('answer', {
-      text_fr: 'lorem ipsum',
+      title_fr: 'lorem ipsum',
+      icon: 'home',
     });
     await render(hbs`{{answer-component answer=answer}}`);
 
-    assert.equal(this.$('h4').text().trim(), 'lorem ipsum');
-    assert.ok(!$(".answer").hasClass("selected"));
-    await click('h4');
-    assert.ok(!$(".answer").hasClass("selected"));
+    assert.equal(this.element.querySelector('.answer-title').textContent.trim(), 'lorem ipsum');
+    assert.ok(this.element.querySelector('.answer-icon svg').classList.contains('fa-home'));
+    assert.ok(!this.element.querySelector('.answer').classList.contains('selected'));
 
+    await this.set('answer.selected', true);
+    assert.ok(this.element.querySelector('.answer-icon svg').classList.contains('fa-check'));
+    assert.ok(this.element.querySelector('.answer').classList.contains('selected'));
 
   });
 });

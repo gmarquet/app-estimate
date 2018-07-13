@@ -23,7 +23,7 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
-  this.namespace = '/api';
+  this.namespace = '/api/v1';
 
   this.get('/questions');
   this.get('/questions/:id');

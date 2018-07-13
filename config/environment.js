@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = function(environment) {
+  let deployTarget = process.env.DEPLOY_TARGET;
   let ENV = {
-    modulePrefix: 'estimate-my-app',
+    modulePrefix: 'app-estimate',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -27,12 +28,15 @@ module.exports = function(environment) {
     defaultLocale: 'fr'
   };
 
+  ENV.apiUrl = deployTarget || "";
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['ember-cli-mirage'] = { enabled: false };
   }
 
   if (environment === 'test') {

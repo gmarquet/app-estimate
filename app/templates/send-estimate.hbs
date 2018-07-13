@@ -1,6 +1,30 @@
 <h4>{{t "send-estimate.contact-me"}}</h4>
 
 <hr>
-<p>{{t "send-estimate.tip-button"}}</p>
-<hr>
-{{send-email class="text-center" model=model}}
+
+{{#bs-form model=this onSubmit=(action "sendEmail") as |form|}}
+  {{form.element controlType="email" label="Email" placeholder="Email" property="email" required=true}}
+  {{#bs-button type="primary" buttonType="submit" disabled=isSaving}}
+    {{#if isSaving}}
+      {{fa-icon 'spinner' spin=true}}
+    {{else}}
+      {{fa-icon "envelope"}}
+    {{/if}}
+    {{t "send-email.button"}}
+  {{/bs-button}}
+{{/bs-form}}
+
+
+{{#bs-alert
+  visible=showError
+  type="danger"
+}}
+  {{t 'send-estimate.error'}}
+{{/bs-alert}}
+
+{{#bs-alert
+  visible=emailSended
+  type="success"
+}}
+  {{t 'send-estimate.estimate-sended'}}
+{{/bs-alert}}

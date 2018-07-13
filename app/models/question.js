@@ -9,6 +9,7 @@ export default DS.Model.extend({
   description_fr: attr('string'),
   description_en: attr('string'),
   icon: attr('string', {defaultValue: "question"}),
+  icon_prefix: attr('string', {defaultValue: "fas"}),
   multiple: attr('boolean'),
   passable: attr('boolean'),
   passed: attr('boolean'),

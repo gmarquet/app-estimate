@@ -1,10 +1,12 @@
-{{#if answer.selected}}
-  {{fa-icon "check" class="answer-icon"}}
-{{else}}
-  {{fa-icon answer.icon prefix=answer.icon_prefix class="answer-icon"}}
-{{/if}}
-<h4>
-  {{m-t answer "text"}}
+<div class="answer-icon">
+  {{#if answer.selected}}
+    {{fa-icon "check" class="answer-icon"}}
+  {{else}}
+    {{fa-icon answer.icon prefix=answer.icon_prefix class="answer-icon"}}
+  {{/if}}
+</div>
+<h4 class="answer-title">
+  {{m-t answer "title"}}
 </h4>
 <span class="info badge badge-info">
   {{fa-icon "info" fixedWidth=true}}

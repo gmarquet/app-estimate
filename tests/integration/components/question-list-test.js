@@ -6,7 +6,7 @@ import Service from '@ember/service';
 
 const routerStub = Service.extend({
   currentRouteName: 'question',
-  currentURL: '/3',
+  currentURL: '/13',
 });
 
 module('Integration | Component | question-list', function(hooks) {
@@ -20,16 +20,17 @@ module('Integration | Component | question-list', function(hooks) {
     this.set('questions', [{id: "1"},{id: "2"},{id: "3"},{id: "4"},{id: "5"}])
     await render(hbs`{{question-list questions=questions}}`);
 
-    assert.equal(this.$('a').length, 7);
-    assert.equal(this.$('.divider').length, 6);
+    assert.equal(this.element.querySelectorAll('a').length, 7);
+    assert.equal(this.element.querySelectorAll('.divider').length, 6);
 
   });
 
   test('Active link', async function(assert) {
-    this.set('questions', [{id: "1"},{id: "2"},{id: "3"},{id: "4"},{id: "5"}])
+    this.set('questions', [{id: "11"},{id: "12"},{id: "13"},{id: "14"},{id: "15"}])
     await render(hbs`{{question-list questions=questions}}`);
 
-    assert.ok(this.$('a:eq(3)').hasClass('active'));
-    assert.ok(!this.$('a:eq(2)').hasClass('active'));
+    assert.ok(this.element.querySelectorAll('a')[3].classList.contains('active'));
+    assert.ok(!this.element.querySelectorAll('a')[2].classList.contains('active'));
+
   });
 });

@@ -19,18 +19,18 @@ module('Integration | Component | question-link', function(hooks) {
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');
-    assert.ok(this.$('a').hasClass('badge-primary'));
+    assert.ok(this.element.querySelector('a').classList.contains('badge-primary'));
 
     run(() =>{
       this.set('isValid', true);
     });
 
-    assert.ok(this.$('a').hasClass('badge-success'));
+    assert.ok(this.element.querySelector('a').classList.contains('badge-success'));
 
     run(() =>{
       this.set('active', true);
     });
 
-    assert.ok(this.$('a').hasClass('badge-secondary'));
+    assert.ok(this.element.querySelector('a').classList.contains('badge-secondary'));
   });
 });

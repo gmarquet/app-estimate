@@ -9,7 +9,7 @@ const i18nStub = Service.extend({
   locale: 'fr',
   init(){
     this._super(...arguments);
-    this.locales = ['fr', 'en'];
+    this.locales = ['fr', 'en', 'de', 'jp'];
   }
 });
 
@@ -21,15 +21,12 @@ module('Integration | Component | language-selector', function(hooks) {
   });
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`{{language-selector}}`);
 
-    assert.equal(this.$('a').length, 2);
-    assert.equal(this.$('img').attr("src"), "/assets/images/fr.png");
+    assert.equal(this.element.querySelectorAll('a').length, 4);
+    assert.equal(this.element.querySelector('img').getAttribute("src"), "/assets/images/fr.png");
 
     await click('a:last-of-type');
-    assert.equal(this.$('img').attr("src"), "/assets/images/en.png");
+    assert.equal(this.element.querySelector('img').getAttribute("src"), "/assets/images/jp.png");
   });
 });
