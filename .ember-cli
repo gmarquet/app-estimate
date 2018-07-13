@@ -12,7 +12,5 @@
 
   "proxy-live-reload": {
     "host": "localhost"
-  },
-
-  "disableAnalytics": true
+  }
 }

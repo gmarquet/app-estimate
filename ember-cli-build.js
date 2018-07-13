@@ -20,7 +20,7 @@ module.exports = function(defaults) {
     },
     numeral: {
       includeLocales: ['fr']
-    }
+    },
     fingerprint: {
       exclude: ['assets/images/*']
     }

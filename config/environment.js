@@ -1,7 +1,8 @@
 'use strict';
 
 module.exports = function(environment) {
-  let deployTarget = process.env.DEPLOY_TARGET;
+  const deployTarget = process.env.DEPLOY_TARGET;
+  const GoogleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID || 'UA-XXXXXXXX-Y';
   let ENV = {
     modulePrefix: 'app-estimate',
     environment,
@@ -22,6 +23,17 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+  };
+
+  ENV["analytics"] = {
+    integrations: [
+      {
+        name: 'GoogleAnalytics',
+        config: {
+          id: GoogleAnalyticsId,
+        }
+      },
+    ]
   };
 
   ENV.i18n = {
