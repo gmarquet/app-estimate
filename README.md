@@ -23,6 +23,8 @@ You will need the following things properly installed on your computer.
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
+Change ```ENV['ember-cli-mirage'] = { enabled: false };``` to `true` to use mirage client-side server as API
+
 ### Running Tests
 
 * `ember test`
