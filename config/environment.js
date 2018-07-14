@@ -25,16 +25,6 @@ module.exports = function(environment) {
     }
   };
 
-  ENV["analytics"] = {
-    integrations: [
-      {
-        name: 'GoogleAnalytics',
-        config: {
-          id: GoogleAnalyticsId,
-        }
-      },
-    ]
-  };
 
   ENV.i18n = {
     defaultLocale: 'fr'
@@ -67,6 +57,16 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV["analytics"] = {
+      integrations: [
+        {
+          name: 'GoogleAnalytics',
+          config: {
+            id: GoogleAnalyticsId,
+          }
+        },
+      ]
+    };
     // here you can enable a production-specific feature
   }
 
