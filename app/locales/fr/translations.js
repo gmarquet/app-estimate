@@ -1,4 +1,8 @@
 export default {
+  'pagetitle.app': 'Estimez votre application web',
+  'pagetitle.index': 'Accueil',
+  'pagetitle.question': 'Question',
+  'pagetitle.send-estimate': 'Envoyer une estimation',
   'application.title': 'Estimez le coût de votre application web',
   'question.no-anwser': 'Aucune réponse pour cette question',
   'question.next-button': 'Question suivante',
