@@ -2,7 +2,6 @@ import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import EmberObject from '@ember/object';
 import { get } from '@ember/object';
-import ArrayProxy from '@ember/array/proxy';
 
 module('Unit | Model | estimate ', function(hooks) {
   setupTest(hooks);
