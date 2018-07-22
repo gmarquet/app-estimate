@@ -11,16 +11,17 @@
   &.selected{
     background:theme-color(success);
   }
-  .price,
-  .info{
+  .price{
     height: 2rem;
     line-height: 1.5rem;
     text-align: center;
-    border-radius: 0 0 1rem 1rem;
   }
   .info{
     cursor: help;
-    border-radius: 1rem 1rem 0 0;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    width: 2rem;
     svg.svg-inline--fa{
       height: 1rem;
     }
