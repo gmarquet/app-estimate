@@ -18,7 +18,7 @@ export default {
   'index.button': "Commencer le questionnaire",
   'send-estimate.contact-me': "Pour plus d'informations, n'hésiter pas à me contacter.",
   'send-estimate.tip-button': "Le boutton ci-dessous vous envoie un email avec votre estimation.",
-  'send-email.button': "Envoyer moi cette estimation",
+  'send-email.button': "Recevoir cette estimation par email",
   'send-estimate.estimate-sended': "Email envoyé",
   'send-estimate.error': "Erreur lors de l'envoi de l'email",
   'email.subject': "Demande de prise de contact suite à estimation.",
@@ -31,4 +31,9 @@ export default {
   'price-meter.delivery-time': "Durée de réalisation",
   'price-meter.week': "semaine",
   'price-meter.day-letter': "j",
+  'price-meter.day-letter': "j",
+  'price-meter.daily-rate': "Taux journalier",
+  'price-meter.discount': "Réduction habituelle",
+  'price-meter.work-duration': "Durée",
+  'answer.global': "global",
 };

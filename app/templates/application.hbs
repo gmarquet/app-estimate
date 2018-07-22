@@ -1,3 +1,4 @@
+{{ember-load-remover}}
 {{head-layout}}
 {{title (t "pagetitle.app")  prepend=true}}
 
@@ -13,13 +14,13 @@
     <div class="col-lg-8 col-12">
       {{question-list
         class="d-flex justify-content-between align-items-center"
-        questions=model
+        questions=questions
       }}
       <hr>
       {{liquid-outlet}}
     </div>
     <div class="col-lg-4 col-12 mt-lg-0 mt-5">
-      {{price-meter model=model }}
+      {{price-meter estimate=model id="price-meter" }}
     </div>
   </div>
 </div>

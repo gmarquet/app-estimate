@@ -11,18 +11,11 @@ export default DS.Model.extend({
   description_en: attr('string'),
   icon: attr('string', {defaultValue: "lightbulb"}),
   icon_prefix: attr('string', {defaultValue: "fas"}),
-  selected: attr('boolean', {defaultValue: false}),
   duration: attr('number', {defaultValue: 1}),
-  coefficient: attr('number', {defaultValue: 0}),
-
+  coefficient: attr('number', {defaultValue: null}),
   question: belongsTo('question'),
+  estimate: belongsTo('estimate'),
 
-  coefficientGeneral: 0,
-
-  totalDuration: computed('coefficientGeneral', 'duration', function(){
-    let { duration, coefficientGeneral } = this;
-    let a = Number.parseFloat(duration * (1.0 + coefficientGeneral)).toFixed(2);
-    return Math.round(a*2)/2;
-  }),
+  selected: false,
 
 });

@@ -1,8 +1,9 @@
-import Mixin from '@ember/object/mixin';
+import Service from '@ember/service';
 import { get, computed, observer } from '@ember/object';
 import { on } from '@ember/object/evented';
 
-export default Mixin.create({
+export default Service.extend({
+
   dailyCost: 500,
 
   discountPercent: computed('totalDuration', function(){
@@ -35,15 +36,15 @@ export default Mixin.create({
     return fullPrice - discountValue;
   }),
 
-  totalDuration: computed('model.@each.totalDuration', function(){
-    return get(this, "model").reduce(function(acc, q){
+  totalDuration: computed('questions.@each.totalDuration', function(){
+    return get(this, "questions").reduce(function(acc, q){
       return get(q, "totalDuration") + acc;
     },0);
   }),
 
-  coefficientTotal: computed('model.@each.coefficientTotal', function(){
-    return get(this, "model").reduce(function(acc, q){
-      return get(q, "coefficientTotal") + acc;
+  totalCoefficient: computed('questions.@each.totalCoefficient', function(){
+    return get(this, "questions").reduce(function(acc, q){
+      return get(q, "totalCoefficient") + acc;
     },0);
   }),
 
@@ -51,11 +52,12 @@ export default Mixin.create({
     return Math.ceil((1.5 * get(this, "totalDuration") / 5));
   }),
 
-  _updateCoefficientGeneral: on('init', observer('coefficientTotal',function(){
-    const coefficientTotal = get(this, 'coefficientTotal');
-    get(this, 'model').forEach(function(q){
-      get(q, 'answers').setEach('coefficientGeneral', coefficientTotal);
+  _updateCoefficientGeneral: on('init', observer('totalCoefficient',function(){
+    const totalCoefficient = get(this, 'totalCoefficient');
+    get(this, 'questions').forEach(function(q){
+      get(q, 'answers').setEach('coefficientGeneral', totalCoefficient);
     });
 
   })),
+
 });

@@ -12,26 +12,16 @@ export default DS.Model.extend({
   icon_prefix: attr('string', {defaultValue: "fas"}),
   multiple: attr('boolean'),
   passable: attr('boolean'),
-  passed: attr('boolean'),
-
   answers: hasMany('answer'),
 
-  totalDuration: computed('answers.@each.{selected,totalDuration}',  function(){
-    return get(this, "answers").reduce(function(acc, a){
-      if(get(a, "selected")) return get(a, "totalDuration") + acc;
-      return acc;
-    }, 0);
-  }),
-
-  coefficientTotal: computed('answers.@each.selected', function(){
-    return get(this, "answers").reduce(function(acc, a){
-      if(get(a, "selected")) return get(a, "coefficient") + acc;
-      return acc;
-    }, 0);
-  }),
+  passed: false,
 
   hasOneAnswer: computed('answers.@each.selected', function(){
     return get(this, "answers").isAny('selected', true);
+  }),
+
+  hasCoefficient: computed('answers.@each.coefficient', function(){
+    return get(this, "answers").any((a) => get(a, 'coefficient') > 0);
   }),
 
   isValid: computed('hasOneAnswer', 'passable', 'passed', function(){
@@ -40,16 +30,4 @@ export default DS.Model.extend({
     }
     return false;
   }),
-
-
-  selectAnswer(a){
-    if (get(this, 'multiple')) {
-      a.toggleProperty('selected');
-    }else{
-      get(this, 'answers').forEach((p) =>{
-        p.set('selected', false);
-      });
-      a.set("selected", true);
-    }
-  }
 });

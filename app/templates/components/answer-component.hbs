@@ -8,11 +8,32 @@
 <h4 class="answer-title">
   {{m-t answer "title"}}
 </h4>
-<span class="info badge badge-info">
-  {{fa-icon "info" fixedWidth=true}}
-  {{#bs-popover triggerEvents="hover" placement="top" title="Description"}}
+
+<div class="flex-fill"></div>
+<div class="info badge badge-info">
+  {{fa-icon 'info'}}
+  {{#bs-popover triggerEvents="hover" placement="top" title="Description" delayShow='400'}}
     {{m-t answer "description"}}
   {{/bs-popover}}
-</span>
-
+</div>
+<div class="price badge badge-secondary">
+{{#if answer.question.hasCoefficient}}
+  {{format-price
+    (calculate-price
+      answer.duration
+      estimate.daily_rate
+      answer.coefficient
+    )
+  }}
+(+{{show-percent answer.coefficient}}% {{t 'answer.global'}})
+{{else}}
+  {{format-price
+    (calculate-price
+      answer.duration
+      estimate.daily_rate
+      estimate.totalCoefficient
+    )
+  }}
+{{/if}}
+</div>
 

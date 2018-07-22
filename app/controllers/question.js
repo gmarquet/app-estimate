@@ -2,22 +2,15 @@ import Controller from '@ember/controller';
 import { get } from '@ember/object';
 
 export default Controller.extend({
-  nextUrl: null,
-  classNames: ['question'],
-
   actions:{
     select(a){
-      get(this, "model").selectAnswer(a);
+      this.send('selectAnswer', a);
     },
     next(){
-      let model = get(this, 'model');
-      if (get(model, 'passable')) {
-        model.set('passed', true);
-      }
-      this.send('transitionToNextQuestion');
+      this.send('transitionToNextQuestion', get(this, 'model'));
     },
     prev(){
-      this.send('transitionToPrevQuestion');
+      this.send('transitionToPrevQuestion', get(this, 'model'));
     }
   }
 });

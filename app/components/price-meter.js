@@ -1,7 +1,7 @@
 import Component from '@ember/component';
-import EstimateMathsMixin from '../mixins/estimate-maths';
+import { get, computed } from '@ember/object';
 
-export default Component.extend(EstimateMathsMixin, {
+export default Component.extend({
   showDetails: false,
   classNames: ['card', 'p-2'],
 

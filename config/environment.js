@@ -33,6 +33,9 @@ module.exports = function(environment) {
   ENV.apiUrl = deployTarget || "";
   ENV['ember-cli-mirage'] = { enabled: false };
 
+  ENV['routerScroll'] = {
+    targetElement: '#app-container'
+  };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

@@ -1,9 +1,10 @@
 import Controller from '@ember/controller';
-import EstimateMathsMixin from '../mixins/estimate-maths';
 import { get } from '@ember/object';
+import { calculateDuration } from 'app-estimate/helpers/calculate-duration';
+import { calculatePrice } from 'app-estimate/helpers/calculate-price';
 import { inject as service } from '@ember/service';
 
-export default Controller.extend(EstimateMathsMixin, {
+export default Controller.extend({
   i18n: service(),
   email: null,
   emailSended: false,
@@ -12,28 +13,47 @@ export default Controller.extend(EstimateMathsMixin, {
 
   init(){
     this._super(...arguments);
-    this.model = [];
   },
 
   actions: {
     sendEmail(){
+      let model = get(this, 'model');
+      const locale = get(this, 'i18n.locale');
       this.set('showError', false);
       this.set('isSaving', true);
-      let email = get(this, 'store').createRecord('estimate', {
-        email : get(this, 'email'),
-        locale : get(this, 'i18n.locale'),
-        daily_cost: get(this, 'dailyCost'),
-        delivery_time: get(this, 'deliveryTime'),
-        total_duration: get(this, 'totalDuration'),
-        full_price: get(this, 'fullPrice'),
-        total_price: get(this, 'totalPrice'),
-        discout_percent: get(this, 'discountPercent'),
-        discout_value: get(this, 'discountValue'),
+
+      model.setProperties({
+        locale: locale,
+        delivery_time: get(model, 'deliveryTime'),
+        total_duration: get(model, 'totalDuration'),
+        full_price: get(model, 'fullPrice'),
+        total_price: get(model, 'totalPrice'),
+        total_coefficent: get(model, 'totalCoefficient'),
+        discount_percent: get(model, 'discountPercent'),
+        discount_value: get(model, 'discountValue'),
+        answsers_json: get(model,'sortedQuestions').map(function(item){
+
+          return {
+            question : get(item, 'question.title_'+locale),
+            answers : get(item, 'answers').map(function(answer){
+              return {
+                title: get(answer, 'title_'+locale),
+                duration: calculateDuration([
+                  get(answer, 'duration'),
+                  get(model, 'totalCoefficient')
+                ]),
+                price: calculatePrice([
+                  get(answer, 'duration'),
+                  get(model, 'daily_rate'),
+                  get(model, 'totalCoefficient'),
+                ]),
+              }
+            }),
+          }
+        })
       });
 
-      email.setAnswersFromQuestions(get(this, "model"));
-
-      email.save().then(()=>{
+      model.save().then(()=>{
         this.set("emailSended", true)
         this.set('isSaving', false);
       }).catch(()=>{

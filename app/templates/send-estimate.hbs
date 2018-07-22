@@ -4,7 +4,7 @@
 
 <hr>
 
-{{#bs-form model=this onSubmit=(action "sendEmail") as |form|}}
+{{#bs-form model=model onSubmit=(action "sendEmail") as |form|}}
   {{form.element controlType="email" label="Email" placeholder="Email" property="email" required=true}}
   {{#bs-button type="primary" buttonType="submit" disabled=isSaving}}
     {{#if isSaving}}
@@ -30,3 +30,4 @@
 }}
   {{t 'send-estimate.estimate-sended'}}
 {{/bs-alert}}
+

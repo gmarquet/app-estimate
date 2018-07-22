@@ -1,5 +1,5 @@
 <h3>{{t "price-meter.title"}} :</h3>
-<div class="text-right toggle-details {{if totalPrice "" "notvisible"}}">
+<div class="text-right toggle-details {{if estimate.totalPrice "" "notvisible"}}">
   {{#bs-button class="btn-sm" onClick=(action "toggleDetails")}}
     {{#if showDetails}}
       {{t "price-meter.hide-details"}}
@@ -12,21 +12,28 @@
 {{#bs-collapse collapsed=(not showDetails)}}
   <table class="table table-dark table-sm">
     <tbody>
-        {{#each model as |q|}}
-          {{#if q.hasOneAnswer}}
-            <tr class="bg-dark">
-              <td colspan="3">{{m-t q  "title"}}</td>
+        {{#each estimate.sortedQuestions as |q|}}
+          <tr class="bg-dark">
+            <td colspan="3">{{m-t q.question  "title"}}</td>
+          </tr>
+          {{#each q.answers as |a|}}
+            <tr class="bg-secondary">
+              <td>{{m-t a  "title"}}</td>
+              <td class="cell-days">
+                {{calculate-duration  a.duration  estimate.totalCoefficient}}
+                {{t "price-meter.day-letter"}}
+              </td>
+              <td class="cell-price">
+                {{format-price
+                  (calculate-price
+                    a.duration
+                    estimate.daily_rate
+                    estimate.totalCoefficient
+                  )
+                }}
+              </td>
             </tr>
-            {{#each q.answers as |a|}}
-              {{#if a.selected}}
-                <tr class="bg-secondary">
-                  <td>{{m-t a  "title"}}</td>
-                  <td class="cell-days">{{a.totalDuration}}{{t "price-meter.day-letter"}}</td>
-                  <td class="cell-price">{{format-price (calculate-price dailyCost a.totalDuration)}}</td>
-                </tr>
-              {{/if}}
-            {{/each}}
-          {{/if}}
+          {{/each}}
         {{/each}}
     </tbody>
   </table>
@@ -34,28 +41,52 @@
 
 <table class="table table-dark table-sm">
   <tbody>
-    {{#if discountValue}}
+    {{#if estimate.discountValue}}
     <tr class="bg-dark">
       <td>{{t "price-meter.full-price"}}</td>
-      <td class="cell-days">{{totalDuration}}{{t "price-meter.day-letter"}}</td>
-      <td class="cell-price">{{format-price fullPrice}}</td>
+      <td class="cell-days">{{estimate.totalDuration}}{{t "price-meter.day-letter"}}</td>
+      <td class="cell-price">{{format-price estimate.fullPrice}}</td>
     </tr>
     <tr class="bg-secondary">
       <td>{{t "price-meter.reduction"}}</td>
-      <td class="cell-days">-{{show-percent discountPercent}}%</td>
-      <td class="cell-price">-{{format-price discountValue}}</td>
+      <td class="cell-days">-{{show-percent estimate.discountPercent}}%</td>
+      <td class="cell-price">-{{format-price estimate.discountValue}}</td>
     </tr>
     {{/if}}
     <tr class="bg-dark">
       <td>Total</td>
       <td class="cell-days"></td>
-      <td class="cell-price">{{format-price totalPrice}}</td>
+      <td class="cell-price">{{format-price estimate.totalPrice}}</td>
     </tr>
   </tbody>
 </table>
 
 <div class="delivery-time">
-  {{#if deliveryTime}}
-    {{t "price-meter.delivery-time"}} : <span>{{deliveryTime}}</span> {{t "price-meter.week"}}{{if (gt deliveryTime 1) 's'}}
+  {{#if estimate.deliveryTime}}
+    {{t "price-meter.delivery-time"}} : <span>{{estimate.deliveryTime}}</span> {{t "price-meter.week"}}{{if (gt estimate.deliveryTime 1) 's'}}
   {{/if}}
 </div>
+
+<div class="daily-rate">
+  {{t "price-meter.daily-rate"}} : {{format-price estimate.daily_rate}}
+</div>
+  <table class="table table-sm discount">
+    <tbody>
+      <tr>
+        <td>{{t "price-meter.work-duration"}}</td>
+        <td>{{t "price-meter.discount"}}</td>
+      </tr>
+      <tr>
+        <td>5{{t "price-meter.day-letter"}}</td>
+        <td>-10%</td>
+      </tr>
+      <tr>
+        <td>10{{t "price-meter.day-letter"}}</td>
+        <td>-20%</td>
+      </tr>
+      <tr>
+        <td>20{{t "price-meter.day-letter"}}</td>
+        <td>-30%</td>
+      </tr>
+    </tbody>
+  </table>

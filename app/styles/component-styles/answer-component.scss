@@ -4,18 +4,26 @@
   border-width: 1px;
   text-align: center;
   border-radius: 0;
+  padding:0.5rem;
   &:hover{
     background: #f8f9fa;
   }
   &.selected{
     background:theme-color(success);
   }
+  .price,
+  .info{
+    height: 2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+  }
   .info{
     cursor: help;
-    font-size: inherit;
-    position: absolute;
-    top: 2px;
-    right: 2px;
+    border-radius: 1rem 1rem 0 0;
+    svg.svg-inline--fa{
+      height: 1rem;
+    }
   }
   svg.svg-inline--fa.answer-icon{
     font-size: 8rem;

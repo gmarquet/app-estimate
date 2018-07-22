@@ -9,7 +9,7 @@
 
     <div class="answers d-flex flex-wrap align-content-around">
       {{#each currentModel.answers as |a|}}
-        {{answer-component class="flex-fill col-lg-3 col-6 m-0" answer=a click=(action "select" a)}}
+        {{answer-component class="flex-fill col-lg-3 col-6 m-0" answer=a estimate=estimate click=(action "select" a)}}
       {{else}}
         {{t 'question.no-anwser'}}
       {{/each}}
